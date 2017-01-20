@@ -333,9 +333,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1149527759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 508a529d59d87294691527af54f55361, type: 3}
+  m_Script: {fileID: 11500000, guid: f7cdcf38c5a2dd34b8b238fcf7f6c0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1644025510}
+  scaleForCameraFollowingMultiplierIfSetToOneItFollowsDirectlyIfSetToAHalfItOnlyFollowsHalfWayItIsSimple: 1
+  speedInWichTheCameraFollowsThePlayerSoThatItInterpolatesInANiceAndSmoothFashion: 5
 --- !u!1 &1644025506
 GameObject:
   m_ObjectHideFlags: 0
