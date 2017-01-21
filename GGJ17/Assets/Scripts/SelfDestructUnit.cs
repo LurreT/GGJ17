@@ -17,6 +17,8 @@ public class SelfDestructUnit : MonoBehaviour {
 	private float timestamp;
 	private Rigidbody body;
 
+	public GameObject shockWave;
+
 #if UNITY_EDITOR
 	private static float lowestOff = Mathf.Infinity;
 	private static float highestOff = Mathf.NegativeInfinity;
@@ -45,6 +47,7 @@ public class SelfDestructUnit : MonoBehaviour {
 			transform.position = target;
 			Destroy(gameObject);
 			Destroy(shadowClone);
+			Instantiate (shockWave, new Vector3 (transform.position.x, 0, transform.position.z), Quaternion.identity);
 		} else {
 			// Rotate
 			transform.forward = body.velocity;
