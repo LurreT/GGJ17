@@ -18,20 +18,20 @@ public class ArtilleryMaster : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 			if (Physics.Raycast(ray, out hit)) {
-				StartSongShooting(hit.point);
+				StartSongShooting();
 			}
 		}
 	}
 
-	public void StartSongShooting(Vector3 target) {
-		StartCoroutine(SongShootingRoutine(new List<SingleStrike>(strikes), target));
+	public void StartSongShooting() {
+		StartCoroutine(SongShootingRoutine(new List<SingleStrike>(strikes)));
 	}
 
 	public void StopSongShooting() {
 		StopAllCoroutines();
 	}
 
-	private IEnumerator SongShootingRoutine(List<SingleStrike> strikes, Vector3 target) {
+	private IEnumerator SongShootingRoutine(List<SingleStrike> strikes) {
 		// Give all references to their objects
 		strikes.ForEach(s => {
 			s.spawner = GetStrikeSpawner(s.spawnerName);
@@ -45,7 +45,7 @@ public class ArtilleryMaster : MonoBehaviour {
 			strikes.RemoveAll(s => {
 				if (Time.unscaledTime - start >= s.timestamp - s.flytime) {
 					// Your time has come
-					s.spawner.FireAt(s.unit, target, s.flytime);
+					s.spawner.FireAt(s.unit, s.flytime);
 					return true;
 				} else return false;
 			});

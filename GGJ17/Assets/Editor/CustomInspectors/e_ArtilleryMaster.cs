@@ -27,7 +27,7 @@ public class e_ArtilleryMaster : Editor {
 
 			EditorGUI.PropertyField(rect, item, GUIContent.none);
 		};
-		
+
 		// Spawners
 		spawners = new ReorderableList(serializedObject, serializedObject.FindProperty("spawners"), true, true, true, true);
 
@@ -55,8 +55,8 @@ public class e_ArtilleryMaster : Editor {
 			EditorGUI.LabelField(timestampRect, "TIME");
 			EditorGUI.LabelField(flytimeRect, "PRE");
 		};
-		
-		strikes.drawElementCallback += (rect, index, isActive, isFocused) => { 
+
+		strikes.drawElementCallback += (rect, index, isActive, isFocused) => {
 			rect.yMin += 2;
 			rect.yMax -= 2;
 
@@ -91,7 +91,7 @@ public class e_ArtilleryMaster : Editor {
 		display.Add("-");
 
 		// fill array
-		for (int i=0; i<basedOf.arraySize; i++) {
+		for (int i = 0; i < basedOf.arraySize; i++) {
 			var p = basedOf.GetArrayElementAtIndex(i);
 			if (p.objectReferenceValue != null) display.Add(p.objectReferenceValue.name);
 		}
@@ -128,7 +128,7 @@ public class e_ArtilleryMaster : Editor {
 			do {
 				any = false;
 
-				for (int i=0; i<strikes.serializedProperty.arraySize-1; i++) {
+				for (int i = 0; i < strikes.serializedProperty.arraySize - 1; i++) {
 					var a = strikes.serializedProperty.GetArrayElementAtIndex(i);
 					var b = strikes.serializedProperty.GetArrayElementAtIndex(i+1);
 
