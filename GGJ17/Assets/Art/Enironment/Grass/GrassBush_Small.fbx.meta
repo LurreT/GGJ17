@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 5c37afe592f318447a0e0165d9f2d15a
-timeCreated: 1485009482
+guid: b053322d11256e748bc18043c202c7b3
+timeCreated: 1485020112
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -14,7 +14,7 @@ ModelImporter:
   materials:
     importMaterials: 1
     materialName: 0
-    materialSearch: 2
+    materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -35,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
