@@ -6,26 +6,25 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_GrassOrange
+  m_Name: M_Cliff
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHATEST_ON _EMISSION
+  m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 1
-  m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8a2c8c92590b8c44da0f1ac6900dd236, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _DetailAlbedoMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3627fd9305a5d7f48a21266c77e386e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -49,19 +48,19 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: f1322d3abd928f14a9a8c75b6064927f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6533d74756114df42b3217fb203329c0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dd9040a95f0a504439535a96cd98c8dd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _OcclusionMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3627fd9305a5d7f48a21266c77e386e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -76,7 +75,7 @@ Material:
       second: 1
     - first:
         name: _Cutoff
-      second: 0.44
+      second: 0.5
     - first:
         name: _DetailNormalMapScale
       second: 1
@@ -88,7 +87,7 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0
+      second: 0.5
     - first:
         name: _GlossyReflections
       second: 1
@@ -97,7 +96,7 @@ Material:
       second: 0
     - first:
         name: _Mode
-      second: 1
+      second: 0
     - first:
         name: _OcclusionStrength
       second: 1
@@ -122,7 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.7794118, g: 0.37824395, b: 0.6853449, a: 1}
+      second: {r: 0.5514706, g: 0.5514706, b: 0.5514706, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
