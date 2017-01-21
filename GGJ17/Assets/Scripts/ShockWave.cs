@@ -20,6 +20,6 @@ public class ShockWave : MonoBehaviour {
 
 	IEnumerator SelfDestruct(){
 		yield return new WaitForSeconds (selfDestructIn);
-		Destroy (gameObject);
+		Destroy (transform.parent.parent.gameObject);
 	}
 }

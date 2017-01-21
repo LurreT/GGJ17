@@ -27,7 +27,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Take 001
+  m_Name: shockWaveWithCOl
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -39,7 +39,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7541e00f2117b5d4f819e5760c686a23, type: 3}
+  m_Motion: {fileID: 7400000, guid: 3834036e9f487994cb0403fbf97abfd0, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
