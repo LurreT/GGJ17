@@ -1502,8 +1502,10 @@ MonoBehaviour:
   audioPrefab: {fileID: 82997049389176892, guid: 872ff45c03072b24eae0e3853848c388,
     type: 2}
   echoTime: 2.5
+  timeByBPM: 0
+  bpm: 120
   units:
-  - {fileID: 114884785559578824, guid: 2bebce693ef0be44eb87b129b2d76cff, type: 2}
+  - {fileID: 114131471830903768, guid: 0ed1ebf716265b743961ba3cee52f513, type: 2}
   spawners:
   - {fileID: 434662360}
   - {fileID: 301781006}
@@ -1519,176 +1521,118 @@ MonoBehaviour:
     unitIndex: 0
     timestamp: 1.38
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 3
     unitIndex: 0
     timestamp: 1.594
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 4
     unitIndex: 0
     timestamp: 3.33
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 5
     unitIndex: 0
     timestamp: 3.545
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 5
     unitIndex: 0
     timestamp: 5.28
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 3
     unitIndex: 0
     timestamp: 5.28
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 4
     unitIndex: 0
     timestamp: 5.49
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 7
     unitIndex: 0
     timestamp: 7.23
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 8
     unitIndex: 0
     timestamp: 7.23
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 0
     unitIndex: 0
     timestamp: 7.43
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 1
     unitIndex: 0
     timestamp: 7.43
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 3
     unitIndex: 0
     timestamp: 9.18
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 5
     unitIndex: 0
     timestamp: 9.18
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 3
     unitIndex: 0
     timestamp: 9.39
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 5
     unitIndex: 0
     timestamp: 9.39
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 8
     unitIndex: 0
     timestamp: 11.11
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 0
     unitIndex: 0
     timestamp: 11.33
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 1
     unitIndex: 0
     timestamp: 12.8
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 2
     unitIndex: 0
     timestamp: 13.78
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 8
     unitIndex: 0
     timestamp: 14.267
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 7
     unitIndex: 0
     timestamp: 14.76
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 6
     unitIndex: 0
     timestamp: 15
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
+  - spawnerIndex: 3
+    unitIndex: 0
+    timestamp: 15.25
+    flytime: 1
+  - spawnerIndex: 4
+    unitIndex: 0
+    timestamp: 15.25
+    flytime: 1
+  - spawnerIndex: 5
+    unitIndex: 0
+    timestamp: 15.25
+    flytime: 1
   - spawnerIndex: 4
     unitIndex: 0
     timestamp: 15.5
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
-  - spawnerIndex: 3
-    unitIndex: 0
-    timestamp: 15.25
-    flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
-  - spawnerIndex: 4
-    unitIndex: 0
-    timestamp: 15.25
-    flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
-  - spawnerIndex: 5
-    unitIndex: 0
-    timestamp: 15.25
-    flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 3
     unitIndex: 0
     timestamp: 15.55
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 4
     unitIndex: 0
     timestamp: 15.55
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
   - spawnerIndex: 5
     unitIndex: 0
     timestamp: 15.55
     flytime: 1
-    spawner: {fileID: 0}
-    unit: {fileID: 0}
 --- !u!4 &1784528358
 Transform:
   m_ObjectHideFlags: 0

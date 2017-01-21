@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4586896611848424}
   - component: {fileID: 33380975800562876}
-  - component: {fileID: 135317726775391876}
   - component: {fileID: 23874501354188680}
   - component: {fileID: 54172650104852968}
   - component: {fileID: 114884785559578824}
@@ -112,15 +111,3 @@ MonoBehaviour:
     type: 2}
   shadowProjOffset: 5
   shockWave: {fileID: 1879534202214400, guid: 86ca7e39a80dfbb49ac52fca17fe8043, type: 2}
---- !u!135 &135317726775391876
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1638077068814022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
