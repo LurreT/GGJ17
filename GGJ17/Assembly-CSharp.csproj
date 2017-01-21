@@ -47,6 +47,30 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Utility\Attributes\CameraDropDown.cs" />
+     <Compile Include="Assets\Scripts\Utility\Attributes\EnumFlags.cs" />
+     <Compile Include="Assets\Scripts\Utility\Attributes\SceneDropDown.cs" />
+     <Compile Include="Assets\Scripts\Utility\Attributes\SingleLayer.cs" />
+     <Compile Include="Assets\Scripts\Utility\Attributes\StringOptions.cs" />
+     <Compile Include="Assets\Scripts\Utility\Attributes\TagDropDown.cs" />
+     <Compile Include="Assets\Scripts\Utility\AveragePos.cs" />
+     <Compile Include="Assets\Scripts\Utility\Billboard.cs" />
+     <Compile Include="Assets\Scripts\Utility\Extensions\ColliderExtensions.cs" />
+     <Compile Include="Assets\Scripts\Utility\Extensions\ListExtensions.cs" />
+     <Compile Include="Assets\Scripts\Utility\Extensions\ParticleExtensions.cs" />
+     <Compile Include="Assets\Scripts\Utility\Extensions\RigidbodyExtension.cs" />
+     <Compile Include="Assets\Scripts\Utility\Extensions\TransformExtensions.cs" />
+     <Compile Include="Assets\Scripts\Utility\Extensions\VectorExtensions.cs" />
+     <Compile Include="Assets\Scripts\Utility\Helpers\LayerHelper.cs" />
+     <Compile Include="Assets\Scripts\Utility\Helpers\VectorHelper.cs" />
+     <Compile Include="Assets\Scripts\Utility\KeepUpright.cs" />
+     <Compile Include="Assets\Scripts\Utility\RandomAnimationStart.cs" />
+     <Compile Include="Assets\Scripts\Utility\Rotator.cs" />
+     <Compile Include="Assets\Scripts\Utility\SinMover.cs" />
+     <Compile Include="Assets\Scripts\Utility\SinRotator.cs" />
+     <Compile Include="Assets\Scripts\Utility\UI\AlphaCheck.cs" />
+     <Compile Include="Assets\Scripts\Utility\UI\AlphaRaycaster.cs" />
+     <None Include="Assets\New Text Document.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
