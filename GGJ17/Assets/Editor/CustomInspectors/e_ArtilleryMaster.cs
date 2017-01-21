@@ -81,7 +81,6 @@ public class e_ArtilleryMaster : Editor {
 			var timestamp = item.FindPropertyRelative("timestamp");
 			var flytime = item.FindPropertyRelative("flytime");
 
-			if (flytime.floatValue <= float.Epsilon) flytime.floatValue = 3;
 			
 			Rect spawnerRect = new Rect(rect.x, rect.y, (rect.width - 82) * 0.5f - 2, rect.height);
 			Rect unitRect = new Rect(spawnerRect.xMax + 4, rect.y, spawnerRect.width, rect.height);
@@ -101,6 +100,7 @@ public class e_ArtilleryMaster : Editor {
 
 				spawner.intValue = DrawPopupThingie(combined, spawner, spawners.serializedProperty);
 			} else {
+				if (flytime.floatValue <= float.Epsilon) flytime.floatValue = 3;
 				spawner.intValue = DrawPopupThingie(spawnerRect, spawner, spawners.serializedProperty);
 				unit.intValue = DrawPopupThingie(unitRect, unit, units.serializedProperty);
 			}

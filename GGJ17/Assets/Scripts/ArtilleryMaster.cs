@@ -45,13 +45,13 @@ public class ArtilleryMaster : MonoBehaviour {
 		for (int i=count-1; i>=0; i--) {
 			
 			var si = strikes[i].spawnerIndex;
-			var s = si>=0&&si<spawners.Count ? spawners[si] : null;
+			var s = (si>=0&&si<spawners.Count) ? spawners[si] : null;
 
 			if (s != null && s is CannonCollection) {
 				// Add all from it.
 				foreach (var str in (s as CannonCollection).strikes) {
 					strikes.Add(new SingleStrike {
-						timestamp = strikes[si].timestamp + str.timestamp - strikes[si].flytime,
+						timestamp = strikes[i].timestamp + str.timestamp - strikes[i].flytime,
 						flytime = str.flytime,
 						spawnerIndex = str.spawnerIndex,
 						unitIndex = str.unitIndex,

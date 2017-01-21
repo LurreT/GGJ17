@@ -580,6 +580,85 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 336460740}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &379633315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 379633317}
+  - component: {fileID: 379633316}
+  m_Layer: 0
+  m_Name: collection test (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &379633316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379633315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae83508c947ad28448e23874105507de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: 0, y: 0, z: 0}
+  parent: {fileID: 1784528357}
+  strikes:
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 0
+    flytime: 1
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 0.25
+    flytime: 1
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 0.5
+    flytime: 1
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 0.75
+    flytime: 1
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 1
+    flytime: 1
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 1.25
+    flytime: 1
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 1.5
+    flytime: 1
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 1.75
+    flytime: 1
+  - spawnerIndex: 1
+    unitIndex: 1
+    timestamp: 2
+    flytime: 1
+--- !u!4 &379633317
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379633315}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.6046772, y: 1.5403519, z: 0.07036018}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1784528358}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434662358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,29 +1417,53 @@ MonoBehaviour:
   parent: {fileID: 1784528357}
   strikes:
   - spawnerIndex: 0
-    unitIndex: 0
+    unitIndex: 1
     timestamp: 0
-    flytime: 3
+    flytime: 1
   - spawnerIndex: 0
-    unitIndex: 0
+    unitIndex: 1
+    timestamp: 0.25
+    flytime: 1
+  - spawnerIndex: 0
+    unitIndex: 1
+    timestamp: 0.5
+    flytime: 1
+  - spawnerIndex: 0
+    unitIndex: 1
+    timestamp: 0.75
+    flytime: 1
+  - spawnerIndex: 0
+    unitIndex: 1
     timestamp: 1
-    flytime: 3
+    flytime: 1
   - spawnerIndex: 0
-    unitIndex: 0
+    unitIndex: 1
+    timestamp: 1.25
+    flytime: 1
+  - spawnerIndex: 0
+    unitIndex: 1
+    timestamp: 1.5
+    flytime: 1
+  - spawnerIndex: 0
+    unitIndex: 1
+    timestamp: 1.75
+    flytime: 1
+  - spawnerIndex: 0
+    unitIndex: 1
     timestamp: 2
-    flytime: 3
+    flytime: 1
 --- !u!4 &1288665980
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288665978}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.6046772, y: 1.5403519, z: 0.07036018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1784528358}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462347607
 GameObject:
@@ -1604,6 +1707,7 @@ MonoBehaviour:
   bpm: 140
   units:
   - {fileID: 114131471830903768, guid: 0ed1ebf716265b743961ba3cee52f513, type: 2}
+  - {fileID: 114131471830903768, guid: 014e56752b2c90340aa6584c75d713bf, type: 2}
   spawners:
   - {fileID: 434662360}
   - {fileID: 301781006}
@@ -1615,67 +1719,24 @@ MonoBehaviour:
   - {fileID: 1600739159}
   - {fileID: 805823404}
   - {fileID: 1288665979}
+  - {fileID: 379633316}
   strikes:
   - spawnerIndex: 9
     unitIndex: 0
     timestamp: 4
-    flytime: 1
-  - spawnerIndex: 9
-    unitIndex: 0
-    timestamp: 4.5
-    flytime: 1
-  - spawnerIndex: 4
-    unitIndex: 0
-    timestamp: 6
-    flytime: 1
-  - spawnerIndex: 5
+    flytime: 0
+  - spawnerIndex: 10
     unitIndex: 0
     timestamp: 8
-    flytime: 1
-  - spawnerIndex: 5
+    flytime: 0
+  - spawnerIndex: 10
     unitIndex: 0
-    timestamp: 10
-    flytime: 1
-  - spawnerIndex: 6
+    timestamp: 12
+    flytime: 0
+  - spawnerIndex: 9
     unitIndex: 0
-    timestamp: 15
-    flytime: 1
-  - spawnerIndex: 4
-    unitIndex: 0
-    timestamp: 16
-    flytime: 1
-  - spawnerIndex: 7
-    unitIndex: 0
-    timestamp: 17
-    flytime: 1
-  - spawnerIndex: 8
-    unitIndex: 0
-    timestamp: 18
-    flytime: 1
-  - spawnerIndex: 0
-    unitIndex: 0
-    timestamp: 19
-    flytime: 1
-  - spawnerIndex: 1
-    unitIndex: 0
-    timestamp: 20
-    flytime: 1
-  - spawnerIndex: 3
-    unitIndex: 0
-    timestamp: 21
-    flytime: 1
-  - spawnerIndex: 5
-    unitIndex: 0
-    timestamp: 30
-    flytime: 1
-  - spawnerIndex: 3
-    unitIndex: 0
-    timestamp: 33
-    flytime: 1
-  - spawnerIndex: 5
-    unitIndex: 0
-    timestamp: 34
-    flytime: 1
+    timestamp: 12.125
+    flytime: 0
 --- !u!4 &1784528358
 Transform:
   m_ObjectHideFlags: 0
@@ -1695,6 +1756,8 @@ Transform:
   - {fileID: 1462347608}
   - {fileID: 1600739158}
   - {fileID: 805823403}
+  - {fileID: 1288665980}
+  - {fileID: 379633317}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
