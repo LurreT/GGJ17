@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 9cf8a5860bd542342a9597a6269e7501
-timeCreated: 1485020112
+guid: ab23d623456bc43429066686b1af6b02
+timeCreated: 1485022189
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: polySurface2
-    9500000: //RootNode
+    100000: tree2_Low
+    100002: //RootNode
+    400000: tree2_Low
+    400002: //RootNode
+    2300000: tree2_Low
+    3300000: tree2_Low
+    4300000: tree2_Low
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,7 +74,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
