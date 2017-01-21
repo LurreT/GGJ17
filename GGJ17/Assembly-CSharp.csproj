@@ -79,7 +79,10 @@
      <Compile Include="Assets\Scripts\Utility\SinRotator.cs" />
      <Compile Include="Assets\Scripts\Utility\UI\AlphaCheck.cs" />
      <Compile Include="Assets\Scripts\Utility\UI\AlphaRaycaster.cs" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\New Text Document.txt" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

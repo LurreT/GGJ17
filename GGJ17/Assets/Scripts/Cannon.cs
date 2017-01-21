@@ -13,6 +13,7 @@ public class Cannon : MonoBehaviour {
 		SelfDestructUnit clone = Instantiate(prefab, transform.position, Quaternion.identity);
 
 		clone.delay = impactAfter;
+		clone.target = target;
 
 		// Get components
 		var body = clone.GetComponent<Rigidbody>();
