@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e50e807be3c3464286ff0c111dc34fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shockWave: {fileID: 1879534202214400, guid: 86ca7e39a80dfbb49ac52fca17fe8043, type: 2}
   delay: 0
 --- !u!135 &135317726775391876
 SphereCollider:

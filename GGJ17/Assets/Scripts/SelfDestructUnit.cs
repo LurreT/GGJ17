@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SelfDestructUnit : MonoBehaviour {
 
+	public GameObject shockWave;
+
 	[HideInInspector]
 	public float delay;
 	private float timestamp;
@@ -30,6 +32,7 @@ public class SelfDestructUnit : MonoBehaviour {
 
 			// Do it. Kill it. Good goood
 			SendMessage("OnSelfDestruct", SendMessageOptions.DontRequireReceiver);
+			Instantiate (shockWave, new Vector3 (transform.position.x, 0, transform.position.z), Quaternion.identity);
 			Destroy(gameObject);
 		}
 	}
