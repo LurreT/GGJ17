@@ -41,18 +41,18 @@ public class PlayerMovement : MonoBehaviour {
 
 		//Drag
 		if(rb.velocity.z < 0){
-//			rb.velocity += new Vector3 (0, 0, drag);
-			rb.AddForce (0, 0, drag);
+			rb.velocity += new Vector3 (0, 0, drag);
+//			rb.AddForce (0, 0, drag);
 		}else{
-//			rb.velocity += new Vector3 (0, 0, -drag);
-			rb.AddForce (0, 0, -drag);
+			rb.velocity += new Vector3 (0, 0, -drag);
+//			rb.AddForce (0, 0, -drag);
 		}
 		if(rb.velocity.x < 0){
-//			rb.velocity += new Vector3 (drag,0,0);
-			rb.AddForce (drag,0,0);
+			rb.velocity += new Vector3 (drag,0,0);
+//			rb.AddForce (drag,0,0);
 		}else{
-//			rb.velocity += new Vector3 (-drag,0,0);
-			rb.AddForce (-drag,0,0);
+			rb.velocity += new Vector3 (-drag,0,0);
+//			rb.AddForce (-drag,0,0);
 		}
 
 
@@ -97,6 +97,9 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.GetAxis("Cancel") > 0) {
 			GameObject.Find ("PauseMenu").GetComponent<Menu>().Pause();
 		}
+
+
+		Physics.IgnoreLayerCollision (8, 8, true);
 	}
 	IEnumerator JumpDelay(){
 		yield return new WaitForSeconds (jumpDelay);

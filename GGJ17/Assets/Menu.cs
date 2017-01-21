@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour {
 	public GameObject pauseMenu;
 
 	public void StartGame(){
-		SceneManager.LoadScene (2);
+		SwitchScene.GotoScene ("Lukas scene");
 	}
 	public void ExitGame(){
 		Application.CancelQuit ();
