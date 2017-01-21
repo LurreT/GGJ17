@@ -7,6 +7,10 @@ public class ArtilleryMaster : MonoBehaviour {
 
 	public AudioSource audioPrefab;
 	public float echoTime = 2.5f;
+	public bool timeByBPM;
+	[HideInInspector]
+	public int bpm = 120;
+	public float bps { get { return timeByBPM ? bpm / 60f : 1; } }
 
 	[HideInInspector]
 	public List<SelfDestructUnit> units;
@@ -53,7 +57,7 @@ public class ArtilleryMaster : MonoBehaviour {
 		while (strikes.Count > 0 && isPlaying) {
 			// Spawn all that needs to and remove them at the same time.
 			strikes.RemoveAll(s => {
-				if (Time.unscaledTime - start >= s.timestamp - s.flytime) {
+				if (Time.unscaledTime - start >= bps * s.timestamp - s.flytime) {
 					// Your time has come
 					s.spawner.FireAt(s.unit, s.flytime);
 					return true;
@@ -65,11 +69,13 @@ public class ArtilleryMaster : MonoBehaviour {
 			// Wait for next strike
 			// PRETTY INEFFICIENT SYSTEM.
 			// CHECKS EVERY STRIKE EACH FRAME
-			yield return new WaitUntil(() => !isPlaying || strikes.FindIndex(s => Time.unscaledTime - start >= s.timestamp - s.flytime) != -1);
+			yield return new WaitUntil(() => !isPlaying || strikes.FindIndex(s => Time.unscaledTime - start >= bps * s.timestamp - s.flytime) != -1);
 		}
 
 		// should start echo effect?
 		yield return new WaitWhile(() => isPlaying && audio.clip.length - audio.time > echoTime);
+
+		isPlaying = false;
 
 		var echo = audio.gameObject.AddComponent<AudioEchoFilter>();
 
@@ -89,7 +95,6 @@ public class ArtilleryMaster : MonoBehaviour {
 			echo.wetMix = 1 - (Time.unscaledTime - start) / echoTime;
 		}
 
-		isPlaying = false;
 		Destroy(audio.gameObject);
 	}
 
@@ -100,7 +105,9 @@ public class ArtilleryMaster : MonoBehaviour {
 		public float timestamp;
 		public float flytime;
 
+		[System.NonSerialized]
 		public Cannon spawner;
+		[System.NonSerialized]
 		public SelfDestructUnit unit;
 	}
 }

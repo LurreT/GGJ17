@@ -3,6 +3,8 @@ using UnityEditor;
 using System.Collections;
 using UnityEditorInternal;
 using System.Collections.Generic;
+using System;
+using UnityEditor.AnimatedValues;
 
 [CustomEditor(typeof(ArtilleryMaster))]
 public class e_ArtilleryMaster : Editor {
@@ -10,8 +12,12 @@ public class e_ArtilleryMaster : Editor {
 	private ReorderableList units;
 	private ReorderableList spawners;
 	private ReorderableList strikes;
+	private AnimBool m_ShowExtraFields;
 
 	private void OnEnable() {
+		m_ShowExtraFields = new AnimBool(serializedObject.FindProperty("timeByBPM").boolValue);
+		m_ShowExtraFields.valueChanged.AddListener(Repaint);
+
 		// Units
 		units = new ReorderableList(serializedObject, serializedObject.FindProperty("units"), false, true, true, true);
 
@@ -56,11 +62,11 @@ public class e_ArtilleryMaster : Editor {
 		strikes = new ReorderableList(serializedObject, serializedObject.FindProperty("strikes"), true, true, true, true);
 
 		strikes.drawHeaderCallback += rect => {
-			Rect labelRect = new Rect(rect.x, rect.y, rect.width - 68, rect.height);
-			Rect timestampRect = new Rect(labelRect.xMax + 4, rect.y, 30, rect.height);
-			Rect flytimeRect = new Rect(timestampRect.xMax + 4, rect.y, 30, rect.height);
+			Rect labelRect = new Rect(rect.x, rect.y, rect.width - 82, rect.height);
+			Rect timestampRect = new Rect(labelRect.xMax + 4, rect.y, 50, rect.height);
+			Rect flytimeRect = new Rect(timestampRect.xMax + 4, rect.y, 24, rect.height);
 			EditorGUI.LabelField(labelRect, strikes.serializedProperty.displayName);
-			EditorGUI.LabelField(timestampRect, "TIME");
+			EditorGUI.LabelField(timestampRect, serializedObject.FindProperty("timeByBPM").boolValue ? "BEAT" : "TIME");
 			EditorGUI.LabelField(flytimeRect, "PRE");
 		};
 
@@ -77,10 +83,10 @@ public class e_ArtilleryMaster : Editor {
 
 			if (flytime.floatValue <= float.Epsilon) flytime.floatValue = 3;
 
-			Rect spawnerRect = new Rect(rect.x, rect.y, (rect.width - 68) * 0.5f - 2, rect.height);
+			Rect spawnerRect = new Rect(rect.x, rect.y, (rect.width - 82) * 0.5f - 2, rect.height);
 			Rect unitRect = new Rect(spawnerRect.xMax + 4, rect.y, spawnerRect.width, rect.height);
-			Rect timestampRect = new Rect(unitRect.xMax + 4, rect.y, 30, rect.height);
-			Rect flytimeRect = new Rect(timestampRect.xMax + 4, rect.y, 30, rect.height);
+			Rect timestampRect = new Rect(unitRect.xMax + 4, rect.y, 50, rect.height);
+			Rect flytimeRect = new Rect(timestampRect.xMax + 4, rect.y, 24, rect.height);
 
 			//EditorGUI.PropertyField(spawnerRect, spawner, GUIContent.none);
 			//EditorGUI.PropertyField(unitRect, unit, GUIContent.none);
@@ -113,8 +119,19 @@ public class e_ArtilleryMaster : Editor {
 
 	public override void OnInspectorGUI() {
 		DrawDefaultInspector();
-
 		serializedObject.Update();
+
+		m_ShowExtraFields.target = serializedObject.FindProperty("timeByBPM").boolValue;
+
+		using (var group = new EditorGUILayout.FadeGroupScope(m_ShowExtraFields.faded)) {
+			if (group.visible) {
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("bpm"), new GUIContent("BPM"));
+				using (new EditorGUI.DisabledGroupScope(true))
+					EditorGUILayout.FloatField("BPS", (target as ArtilleryMaster).bps);
+			}
+		}
+
+		EditorGUILayout.Space();
 		units.DoLayoutList();
 		EditorGUILayout.Space();
 		spawners.DoLayoutList();

@@ -45,8 +45,8 @@ public class SelfDestructUnit : MonoBehaviour {
 
 			// Do it. Kill it. Good goood
 			transform.position = target;
+			Destroy(shadowClone.gameObject);
 			Destroy(gameObject);
-			Destroy(shadowClone);
 			Instantiate (shockWave, new Vector3 (transform.position.x, 0, transform.position.z), Quaternion.identity);
 		} else {
 			// Rotate

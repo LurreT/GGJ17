@@ -1,0 +1,353 @@
+fileFormatVersion: 2
+guid: 1b33fe9c2f344c949b4410f1315fc37e
+timeCreated: 1485021632
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: body_ctrl
+    100004: body_ctrl_GRP
+    100006: character_all
+    100008: character_move
+    100010: Hips
+    100012: Jaw
+    100014: Jaw_ctGRP
+    100016: Jaw_CTRL
+    100018: LeftArm
+    100020: LeftArm_Ctrl
+    100022: LeftArm_Ctrl_GRP
+    100024: LeftClavicle
+    100026: LeftElbow
+    100028: LeftEye
+    100030: LeftFoot
+    100032: LeftHand
+    100034: LeftHip
+    100036: LeftKnee
+    100038: LeftLeg
+    100040: LeftLeg_Ctrl
+    100042: LeftLeg_Ctrl_GRP
+    100044: Neck
+    100046: Neck1
+    100048: Neck_ctGRP
+    100050: Neck_CTRL
+    100052: Reference
+    100054: RightArm
+    100056: RightArm_Ctrl
+    100058: RightArm_Ctrl_GRP
+    100060: RightClavicle
+    100062: RightElbow
+    100064: RightEye
+    100066: RightFoot
+    100068: RightHand
+    100070: RightHip
+    100072: RightKnee
+    100074: RightLeg
+    100076: RightLeg_Ctrl
+    100078: RightLeg_Ctrl_GRP
+    100080: Spine
+    100082: Spine1
+    100084: Spine2
+    100086: Spine2_ctGRP
+    100088: Spine2_CTRL
+    100090: Spine3
+    100092: Spine4
+    100094: Spine4_ctGRP
+    100096: Spine4_CTRL
+    100098: Spine_ctGRP
+    100100: Spine_CTRL
+    100102: Tail
+    100104: Tail1
+    100106: Tail1_ctGRP
+    100108: Tail1_CTRL
+    100110: Tail2
+    100112: Tail2_ctGRP
+    100114: Tail2_CTRL
+    100116: Tail3
+    100118: Tail_ctGRP
+    100120: Tail_CTRL
+    100122: Tiger
+    400000: //RootNode
+    400002: body_ctrl
+    400004: body_ctrl_GRP
+    400006: character_all
+    400008: character_move
+    400010: Hips
+    400012: Jaw
+    400014: Jaw_ctGRP
+    400016: Jaw_CTRL
+    400018: LeftArm
+    400020: LeftArm_Ctrl
+    400022: LeftArm_Ctrl_GRP
+    400024: LeftClavicle
+    400026: LeftElbow
+    400028: LeftEye
+    400030: LeftFoot
+    400032: LeftHand
+    400034: LeftHip
+    400036: LeftKnee
+    400038: LeftLeg
+    400040: LeftLeg_Ctrl
+    400042: LeftLeg_Ctrl_GRP
+    400044: Neck
+    400046: Neck1
+    400048: Neck_ctGRP
+    400050: Neck_CTRL
+    400052: Reference
+    400054: RightArm
+    400056: RightArm_Ctrl
+    400058: RightArm_Ctrl_GRP
+    400060: RightClavicle
+    400062: RightElbow
+    400064: RightEye
+    400066: RightFoot
+    400068: RightHand
+    400070: RightHip
+    400072: RightKnee
+    400074: RightLeg
+    400076: RightLeg_Ctrl
+    400078: RightLeg_Ctrl_GRP
+    400080: Spine
+    400082: Spine1
+    400084: Spine2
+    400086: Spine2_ctGRP
+    400088: Spine2_CTRL
+    400090: Spine3
+    400092: Spine4
+    400094: Spine4_ctGRP
+    400096: Spine4_CTRL
+    400098: Spine_ctGRP
+    400100: Spine_CTRL
+    400102: Tail
+    400104: Tail1
+    400106: Tail1_ctGRP
+    400108: Tail1_CTRL
+    400110: Tail2
+    400112: Tail2_ctGRP
+    400114: Tail2_CTRL
+    400116: Tail3
+    400118: Tail_ctGRP
+    400120: Tail_CTRL
+    400122: Tiger
+    7400000: Tiger_Flying
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Tiger_Flying
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Reference
+        weight: 1
+      - path: Reference/Hips
+        weight: 1
+      - path: Reference/Hips/LeftHip
+        weight: 1
+      - path: Reference/Hips/LeftHip/LeftLeg
+        weight: 1
+      - path: Reference/Hips/LeftHip/LeftLeg/LeftKnee
+        weight: 1
+      - path: Reference/Hips/LeftHip/LeftLeg/LeftKnee/LeftFoot
+        weight: 1
+      - path: Reference/Hips/RightHip
+        weight: 1
+      - path: Reference/Hips/RightHip/RightLeg
+        weight: 1
+      - path: Reference/Hips/RightHip/RightLeg/RightKnee
+        weight: 1
+      - path: Reference/Hips/RightHip/RightLeg/RightKnee/RightFoot
+        weight: 1
+      - path: Reference/Hips/Spine
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/LeftClavicle
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/LeftClavicle/LeftArm
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/LeftClavicle/LeftArm/LeftElbow
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/LeftClavicle/LeftArm/LeftElbow/LeftHand
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/Neck
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/Neck/Neck1
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/Neck/Neck1/Jaw
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/Neck/Neck1/LeftEye
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/Neck/Neck1/RightEye
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/RightClavicle
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/RightClavicle/RightArm
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/RightClavicle/RightArm/RightElbow
+        weight: 1
+      - path: Reference/Hips/Spine/Spine1/Spine2/Spine3/Spine4/RightClavicle/RightArm/RightElbow/RightHand
+        weight: 1
+      - path: Reference/Hips/Tail
+        weight: 1
+      - path: Reference/Hips/Tail/Tail1
+        weight: 1
+      - path: Reference/Hips/Tail/Tail1/Tail2
+        weight: 1
+      - path: Reference/Hips/Tail/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Tiger
+        weight: 1
+      - path: Tiger/character_all
+        weight: 1
+      - path: Tiger/character_all/character_move
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL/Spine2_ctGRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL/Spine2_ctGRP/Spine2_CTRL
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL/Spine2_ctGRP/Spine2_CTRL/Spine4_ctGRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL/Spine2_ctGRP/Spine2_CTRL/Spine4_ctGRP/Spine4_CTRL
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL/Spine2_ctGRP/Spine2_CTRL/Spine4_ctGRP/Spine4_CTRL/Neck_ctGRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL/Spine2_ctGRP/Spine2_CTRL/Spine4_ctGRP/Spine4_CTRL/Neck_ctGRP/Neck_CTRL
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL/Spine2_ctGRP/Spine2_CTRL/Spine4_ctGRP/Spine4_CTRL/Neck_ctGRP/Neck_CTRL/Jaw_ctGRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Spine_ctGRP/Spine_CTRL/Spine2_ctGRP/Spine2_CTRL/Spine4_ctGRP/Spine4_CTRL/Neck_ctGRP/Neck_CTRL/Jaw_ctGRP/Jaw_CTRL
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Tail_ctGRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Tail_ctGRP/Tail_CTRL
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Tail_ctGRP/Tail_CTRL/Tail1_ctGRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Tail_ctGRP/Tail_CTRL/Tail1_ctGRP/Tail1_CTRL
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Tail_ctGRP/Tail_CTRL/Tail1_ctGRP/Tail1_CTRL/Tail2_ctGRP
+        weight: 1
+      - path: Tiger/character_all/character_move/body_ctrl_GRP/body_ctrl/Tail_ctGRP/Tail_CTRL/Tail1_ctGRP/Tail1_CTRL/Tail2_ctGRP/Tail2_CTRL
+        weight: 1
+      - path: Tiger/character_all/character_move/LeftArm_Ctrl_GRP
+        weight: 1
+      - path: Tiger/character_all/character_move/LeftArm_Ctrl_GRP/LeftArm_Ctrl
+        weight: 1
+      - path: Tiger/character_all/character_move/LeftLeg_Ctrl_GRP
+        weight: 1
+      - path: Tiger/character_all/character_move/LeftLeg_Ctrl_GRP/LeftLeg_Ctrl
+        weight: 1
+      - path: Tiger/character_all/character_move/RightArm_Ctrl_GRP
+        weight: 1
+      - path: Tiger/character_all/character_move/RightArm_Ctrl_GRP/RightArm_Ctrl
+        weight: 1
+      - path: Tiger/character_all/character_move/RightLeg_Ctrl_GRP
+        weight: 1
+      - path: Tiger/character_all/character_move/RightLeg_Ctrl_GRP/RightLeg_Ctrl
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
