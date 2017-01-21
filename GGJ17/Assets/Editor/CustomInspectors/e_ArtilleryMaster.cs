@@ -13,7 +13,7 @@ public class e_ArtilleryMaster : Editor {
 
 	private void OnEnable() {
 		// Units
-		units = new ReorderableList(serializedObject, serializedObject.FindProperty("units"), true, true, true, true);
+		units = new ReorderableList(serializedObject, serializedObject.FindProperty("units"), false, true, true, true);
 
 		units.drawHeaderCallback += rect => {
 			EditorGUI.LabelField(rect, units.serializedProperty.displayName);
@@ -25,11 +25,15 @@ public class e_ArtilleryMaster : Editor {
 
 			var item = units.serializedProperty.GetArrayElementAtIndex(index);
 
-			EditorGUI.PropertyField(rect, item, GUIContent.none);
+			Rect indexRect = new Rect(rect.x, rect.y, 24, rect.height);
+			Rect itemRect = new Rect(indexRect.xMax + 4, rect.y, rect.width - indexRect.width - 4, rect.height);
+
+			EditorGUI.LabelField(indexRect, "[" + index + "]");
+			EditorGUI.PropertyField(itemRect, item, GUIContent.none);
 		};
 
 		// Spawners
-		spawners = new ReorderableList(serializedObject, serializedObject.FindProperty("spawners"), true, true, true, true);
+		spawners = new ReorderableList(serializedObject, serializedObject.FindProperty("spawners"), false, true, true, true);
 
 		spawners.drawHeaderCallback += rect => {
 			EditorGUI.LabelField(rect, spawners.serializedProperty.displayName);
@@ -41,7 +45,11 @@ public class e_ArtilleryMaster : Editor {
 
 			var item = spawners.serializedProperty.GetArrayElementAtIndex(index);
 
-			EditorGUI.PropertyField(rect, item, GUIContent.none);
+			Rect indexRect = new Rect(rect.x, rect.y, 24, rect.height);
+			Rect itemRect = new Rect(indexRect.xMax + 4, rect.y, rect.width - indexRect.width - 4, rect.height);
+
+			EditorGUI.LabelField(indexRect, "[" + index + "]");
+			EditorGUI.PropertyField(itemRect, item, GUIContent.none);
 		};
 
 		// Strikes
@@ -62,8 +70,8 @@ public class e_ArtilleryMaster : Editor {
 
 			var item = strikes.serializedProperty.GetArrayElementAtIndex(index);
 
-			var spawner = item.FindPropertyRelative("spawnerName");
-			var unit = item.FindPropertyRelative("unitName");
+			var spawner = item.FindPropertyRelative("spawnerIndex");
+			var unit = item.FindPropertyRelative("unitIndex");
 			var timestamp = item.FindPropertyRelative("timestamp");
 			var flytime = item.FindPropertyRelative("flytime");
 
@@ -77,38 +85,30 @@ public class e_ArtilleryMaster : Editor {
 			//EditorGUI.PropertyField(spawnerRect, spawner, GUIContent.none);
 			//EditorGUI.PropertyField(unitRect, unit, GUIContent.none);
 
-			spawner.stringValue = DrawPopupThingie(spawnerRect, spawner, spawners.serializedProperty);
-			unit.stringValue = DrawPopupThingie(unitRect, unit, units.serializedProperty);
+			spawner.intValue = DrawPopupThingie(spawnerRect, spawner, spawners.serializedProperty);
+			unit.intValue = DrawPopupThingie(unitRect, unit, units.serializedProperty);
 
 			EditorGUI.PropertyField(timestampRect, timestamp, GUIContent.none);
 			EditorGUI.PropertyField(flytimeRect, flytime, GUIContent.none);
 		};
 	}
 
-	private string DrawPopupThingie(Rect rect, SerializedProperty prop, SerializedProperty basedOf) {
+	private int DrawPopupThingie(Rect rect, SerializedProperty prop, SerializedProperty basedOf) {
 
 		List<string> display = new List<string>();
-		display.Add("-");
 
 		// fill array
 		for (int i = 0; i < basedOf.arraySize; i++) {
 			var p = basedOf.GetArrayElementAtIndex(i);
-			if (p.objectReferenceValue != null) display.Add(p.objectReferenceValue.name);
+			if (p.objectReferenceValue != null) display.Add("[" + i + "] " + p.objectReferenceValue.name);
+			else display.Add("[" + i + "] <null>");
 		}
 
 		// check which is selected
-		int selected = 0;
-		for (int i = 1; i < display.Count; i++) {
-			if (display[i] == prop.stringValue) {
-				selected = i;
-				break;
-			}
-		}
-
+		int selected = prop.intValue;
 		selected = EditorGUI.Popup(rect, selected, display.ToArray());
-
-		if (selected == 0) return string.Empty;
-		return display[selected];
+		
+		return selected;
 	}
 
 	public override void OnInspectorGUI() {
@@ -122,7 +122,7 @@ public class e_ArtilleryMaster : Editor {
 		strikes.DoLayoutList();
 		EditorGUILayout.Space();
 
-		if (GUILayout.Button("Sort by TIME")) {
+		if (GUILayout.Button("Sort strikes by TIME")) {
 
 			bool any;
 			do {
@@ -141,7 +141,6 @@ public class e_ArtilleryMaster : Editor {
 
 			} while (any);
 
-			Debug.Log("SORTED");
 		}
 
 		EditorGUILayout.Space();

@@ -2,22 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class SelfDestructUnit : MonoBehaviour {
 
-	[HideInInspector]
-	public float delay;
-	private float timestamp;
+	public Projector shadowPrefab;
+	public float shadowProjOffset = 5;
+	private Projector shadowClone;
 
+	[System.NonSerialized]
+	public Vector3 target;
+	[System.NonSerialized]
+	public float delay;
+
+	private float timestamp;
+	private Rigidbody body;
+
+#if UNITY_EDITOR
 	private static float lowestOff = Mathf.Infinity;
 	private static float highestOff = Mathf.NegativeInfinity;
+#endif
 
 	private void Awake() {
 		timestamp = Time.time;
+		body = GetComponent<Rigidbody>();
+		shadowClone = Instantiate(shadowPrefab, target + Vector3.up * shadowProjOffset, shadowPrefab.transform.rotation);
 	}
 
 	private void Update() {
 		if (Time.time >= timestamp + delay) {
-#if DEBUG
+#if UNITY_EDITOR
 			// Debugging
 			float took = Time.time - timestamp;
 			float diff = Mathf.Abs(delay - took);
@@ -29,8 +42,15 @@ public class SelfDestructUnit : MonoBehaviour {
 #endif
 
 			// Do it. Kill it. Good goood
-			SendMessage("OnSelfDestruct", SendMessageOptions.DontRequireReceiver);
+			transform.position = target;
 			Destroy(gameObject);
+			Destroy(shadowClone);
+		} else {
+			// Rotate
+			transform.forward = body.velocity;
+
+			float percent = Mathf.InverseLerp(timestamp, timestamp + delay, Time.time);
+			shadowClone.farClipPlane = (percent+.5f) * shadowProjOffset * 2;
 		}
 	}
 }
