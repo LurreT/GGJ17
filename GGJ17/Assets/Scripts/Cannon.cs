@@ -19,7 +19,7 @@ public class Cannon : MonoBehaviour {
 
 		// Calculate velocity
 		var delta = targetPosition - clone.transform.position;
-		body.velocity = VectorHelper.CalculateVelocity(delta, timeToFly / Time.fixedDeltaTime);
+//		body.velocity = VectorHelper.CalculateVelocity(delta, timeToFly / Time.fixedDeltaTime);
 	}
 
 }

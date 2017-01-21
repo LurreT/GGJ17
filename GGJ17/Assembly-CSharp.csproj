@@ -46,9 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-=======
      <Compile Include="Assets\Scripts\ArtilleryMaster.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
@@ -57,7 +54,6 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SelfDestructUnit.cs" />
      <Compile Include="Assets\Scripts\ShockWave.cs" />
->>>>>>> 78a421d521009551e784432c6ced29123fbfae63
      <Compile Include="Assets\Scripts\Utility\Attributes\CameraDropDown.cs" />
      <Compile Include="Assets\Scripts\Utility\Attributes\EnumFlags.cs" />
      <Compile Include="Assets\Scripts\Utility\Attributes\SceneDropDown.cs" />

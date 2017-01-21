@@ -331,6 +331,16 @@ Prefab:
       propertyPath: camShake
       value: 
       objectReference: {fileID: 1149527765}
+    - target: {fileID: 23261101425677090, guid: 052ab8435e081e54c89841374da33208,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23130684544226636, guid: 052ab8435e081e54c89841374da33208,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6462a305083a9d44bb44afb97955cf40, type: 2}
     m_RemovedComponents:
     - {fileID: 135868037435318324, guid: 052ab8435e081e54c89841374da33208, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 052ab8435e081e54c89841374da33208, type: 2}
@@ -363,7 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   units:
-  - {fileID: 114266654098701444, guid: 2bebce693ef0be44eb87b129b2d76cff, type: 2}
+  - {fileID: 0}
   spawners:
   - {fileID: 1503559113}
   - {fileID: 866429478}
@@ -997,6 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f13926f5fe22674e957dbb86bf8a5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selfDestructIn: 0
 --- !u!1 &1149527759
 GameObject:
   m_ObjectHideFlags: 0
