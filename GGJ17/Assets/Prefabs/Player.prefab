@@ -38,11 +38,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4892107444266902}
   - component: {fileID: 33951260431098422}
-  - component: {fileID: 135868037435318324}
   - component: {fileID: 23261101425677090}
   - component: {fileID: 54050596386413384}
   - component: {fileID: 114165853949645332}
   - component: {fileID: 114464152644361916}
+  - component: {fileID: 65269030122612108}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1458082948945428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 1.46, z: 1.56}
+  m_LocalPosition: {x: 0.52, y: 1.46, z: 1.619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4255671549457328}
@@ -90,7 +90,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a6f62822ef79c50428902135165de607, type: 2}
+  - {fileID: 2100000, guid: 6462a305083a9d44bb44afb97955cf40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +114,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1458082948945428}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -168,6 +168,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!65 &65269030122612108
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458082948945428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.11, z: 1}
+  m_Center: {x: 0, y: 1.09, z: 0}
 --- !u!95 &95081078219728630
 Animator:
   serializedVersion: 3
@@ -214,15 +226,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b69c02cdbcd0f4883578225ddbf633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135868037435318324
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458082948945428}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  health: 4
+  heart:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  camShake: {fileID: 0}

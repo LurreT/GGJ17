@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Cannon.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\SceneSwitch.cs" />
      <Compile Include="Assets\Scripts\SelfDestructUnit.cs" />
      <Compile Include="Assets\Scripts\ShockWave.cs" />
      <Compile Include="Assets\Scripts\Utility\Attributes\CameraDropDown.cs" />
