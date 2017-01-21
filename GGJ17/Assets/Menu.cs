@@ -5,10 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
+	public GameObject pauseMenu;
+
 	public void StartGame(){
 		SceneManager.LoadScene (2);
 	}
 	public void ExitGame(){
 		Application.CancelQuit ();
+	}
+	public void Pause(){
+		Time.timeScale = 0;
+		pauseMenu.SetActive (true);
+	}
+	public void UnPause(){
+		Time.timeScale = 1;
+		pauseMenu.SetActive (false);
 	}
 }

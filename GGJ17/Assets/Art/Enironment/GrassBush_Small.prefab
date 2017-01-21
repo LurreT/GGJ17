@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23095657116220494}
   - component: {fileID: 95063540476075914}
   m_Layer: 0
-  m_Name: GrassBush_Small (1)
+  m_Name: GrassBush_Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

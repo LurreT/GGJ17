@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23459091691254832}
   - component: {fileID: 95896272031796968}
   m_Layer: 0
-  m_Name: GrassBush_Medium (1)
+  m_Name: GrassBush_Medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -144,6 +144,7 @@
      <Compile Include="Assets\Scripts\Utility\SinRotator.cs" />
      <Compile Include="Assets\Scripts\Utility\UI\AlphaCheck.cs" />
      <Compile Include="Assets\Scripts\Utility\UI\AlphaRaycaster.cs" />
+     <Compile Include="Assets\timescaler.cs" />
      <None Include="Assets\Colorful FX\Shaders\ContrastGain.shader" />
      <None Include="Assets\Colorful FX\Shaders\Kuwahara.shader" />
      <None Include="Assets\Colorful FX\Shaders\BleachBypass.shader" />

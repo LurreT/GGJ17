@@ -41,14 +41,18 @@ public class PlayerMovement : MonoBehaviour {
 
 		//Drag
 		if(rb.velocity.z < 0){
-			rb.velocity += new Vector3 (0, 0, drag);
+//			rb.velocity += new Vector3 (0, 0, drag);
+			rb.AddForce (0, 0, drag);
 		}else{
-			rb.velocity += new Vector3 (0, 0, -drag);
+//			rb.velocity += new Vector3 (0, 0, -drag);
+			rb.AddForce (0, 0, -drag);
 		}
 		if(rb.velocity.x < 0){
-			rb.velocity += new Vector3 (drag,0,0);
+//			rb.velocity += new Vector3 (drag,0,0);
+			rb.AddForce (drag,0,0);
 		}else{
-			rb.velocity += new Vector3 (-drag,0,0);
+//			rb.velocity += new Vector3 (-drag,0,0);
+			rb.AddForce (-drag,0,0);
 		}
 
 
@@ -90,6 +94,9 @@ public class PlayerMovement : MonoBehaviour {
 
 		anim.SetFloat ("Blend", rb.velocity.magnitude / speed);
 
+		if (Input.GetAxis("Cancel") > 0) {
+			GameObject.Find ("PauseMenu").GetComponent<Menu>().Pause();
+		}
 	}
 	IEnumerator JumpDelay(){
 		yield return new WaitForSeconds (jumpDelay);

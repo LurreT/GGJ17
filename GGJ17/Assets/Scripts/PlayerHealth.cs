@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
@@ -29,5 +30,10 @@ public class PlayerHealth : MonoBehaviour {
 		GetComponent<PlayerMovement> ().enabled = false;
 		GetComponent<PlayerMovement> ().anim.enabled = false;
 		GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
+		StartCoroutine (AfterDeath ());
+	}
+	IEnumerator AfterDeath(){
+		yield return new WaitForSeconds (3);
+		SceneManager.LoadScene ("EndScene");
 	}
 }

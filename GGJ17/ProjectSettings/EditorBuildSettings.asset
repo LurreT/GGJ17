@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/kalles_playground.unity
   - enabled: 1
     path: Assets/Joel_Playground.unity
+  - enabled: 1
+    path: Assets/EndScene.unity
