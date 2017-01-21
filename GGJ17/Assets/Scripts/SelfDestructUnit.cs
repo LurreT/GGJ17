@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class SelfDestructUnit : MonoBehaviour {
 
+	public SoundEffectSpawner.SoundEffect soundOnDeath;
 	public Projector shadowPrefab;
 	public float shadowProjOffset = 5;
 	private Projector shadowClone;
@@ -48,6 +49,7 @@ public class SelfDestructUnit : MonoBehaviour {
 			Destroy(shadowClone.gameObject);
 			Destroy(gameObject);
 			Instantiate (shockWave, new Vector3 (transform.position.x, 0, transform.position.z), Quaternion.identity);
+			SoundEffectSpawner.PlaySoundEffectAt(transform.position, soundOnDeath);
 		} else {
 			// Rotate
 			transform.forward = body.velocity;

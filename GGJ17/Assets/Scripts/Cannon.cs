@@ -5,6 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class Cannon : MonoBehaviour {
 
+	[HideInInspector]
 	public Vector3 target;
 
 	/// <param name="prefab">The unit to instantiate from (duplicate) when firing.</param>

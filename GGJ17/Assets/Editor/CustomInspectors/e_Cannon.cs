@@ -146,6 +146,7 @@ public class e_Cannon : Editor {
 
 		DrawDefaultInspector();
 
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("target"));
 		EditorGUILayout.Space();
 
 		if (Selection.transforms.Length > 0) {

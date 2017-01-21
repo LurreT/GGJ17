@@ -40,12 +40,36 @@ public class ArtilleryMaster : MonoBehaviour {
 	}
 
 	private IEnumerator SongShootingRoutine(List<SingleStrike> strikes) {
+		// Import from all collections
+		var count = strikes.Count;
+		for (int i=count-1; i>=0; i--) {
+			
+			var si = strikes[i].spawnerIndex;
+			var s = si>=0&&si<spawners.Count ? spawners[si] : null;
+
+			if (s != null && s is CannonCollection) {
+				// Add all from it.
+				foreach (var str in (s as CannonCollection).strikes) {
+					strikes.Add(new SingleStrike {
+						timestamp = strikes[si].timestamp + str.timestamp - strikes[si].flytime,
+						flytime = str.flytime,
+						spawnerIndex = str.spawnerIndex,
+						unitIndex = str.unitIndex,
+					});
+				}
+			}
+		}
+
 		// Give all references to their objects
 		strikes.ForEach(s => {
-			s.spawner = spawners[s.spawnerIndex];
-			s.unit = units[s.unitIndex];
+			s.spawner = s.spawnerIndex >= 0 && s.spawnerIndex < spawners.Count ? spawners[s.spawnerIndex] : null;
+			s.unit = s.unitIndex >= 0 && s.unitIndex < units.Count ? units[s.unitIndex] : null;
 		});
+
+		// Clean list
+		strikes.RemoveAll(s => s.unit == null || s.spawner == null || s.spawner is CannonCollection);
 		
+		// Let's go
 		var audio = Instantiate(audioPrefab);
 		audio.loop = false;
 		audio.playOnAwake = false;
@@ -57,7 +81,7 @@ public class ArtilleryMaster : MonoBehaviour {
 		while (strikes.Count > 0 && isPlaying) {
 			// Spawn all that needs to and remove them at the same time.
 			strikes.RemoveAll(s => {
-				if (Time.unscaledTime - start >= bps * s.timestamp - s.flytime) {
+				if (Time.unscaledTime - start >= s.timestamp/bps - s.flytime) {
 					// Your time has come
 					s.spawner.FireAt(s.unit, s.flytime);
 					return true;
@@ -69,7 +93,7 @@ public class ArtilleryMaster : MonoBehaviour {
 			// Wait for next strike
 			// PRETTY INEFFICIENT SYSTEM.
 			// CHECKS EVERY STRIKE EACH FRAME
-			yield return new WaitUntil(() => !isPlaying || strikes.FindIndex(s => Time.unscaledTime - start >= bps * s.timestamp - s.flytime) != -1);
+			yield return new WaitUntil(() => !isPlaying || strikes.FindIndex(s => Time.unscaledTime - start >= s.timestamp / bps - s.flytime) != -1);
 		}
 
 		// should start echo effect?
