@@ -82,7 +82,7 @@ public class e_ArtilleryMaster : Editor {
 			var flytime = item.FindPropertyRelative("flytime");
 
 			if (flytime.floatValue <= float.Epsilon) flytime.floatValue = 3;
-
+			
 			Rect spawnerRect = new Rect(rect.x, rect.y, (rect.width - 82) * 0.5f - 2, rect.height);
 			Rect unitRect = new Rect(spawnerRect.xMax + 4, rect.y, spawnerRect.width, rect.height);
 			Rect timestampRect = new Rect(unitRect.xMax + 4, rect.y, 50, rect.height);
@@ -91,9 +91,19 @@ public class e_ArtilleryMaster : Editor {
 			//EditorGUI.PropertyField(spawnerRect, spawner, GUIContent.none);
 			//EditorGUI.PropertyField(unitRect, unit, GUIContent.none);
 
-			spawner.intValue = DrawPopupThingie(spawnerRect, spawner, spawners.serializedProperty);
-			unit.intValue = DrawPopupThingie(unitRect, unit, units.serializedProperty);
 
+			if (spawner.intValue >= 0
+			&& spawner.intValue < spawners.count
+			&& spawners.serializedProperty.GetArrayElementAtIndex(spawner.intValue).objectReferenceValue is CannonCollection) {
+				Rect combined = new Rect();
+				combined.min = Vector2.Min(spawnerRect.min, unitRect.min);
+				combined.max = Vector2.Max(spawnerRect.max, unitRect.max);
+
+				spawner.intValue = DrawPopupThingie(combined, spawner, spawners.serializedProperty);
+			} else {
+				spawner.intValue = DrawPopupThingie(spawnerRect, spawner, spawners.serializedProperty);
+				unit.intValue = DrawPopupThingie(unitRect, unit, units.serializedProperty);
+			}
 			EditorGUI.PropertyField(timestampRect, timestamp, GUIContent.none);
 			EditorGUI.PropertyField(flytimeRect, flytime, GUIContent.none);
 		};
@@ -106,7 +116,11 @@ public class e_ArtilleryMaster : Editor {
 		// fill array
 		for (int i = 0; i < basedOf.arraySize; i++) {
 			var p = basedOf.GetArrayElementAtIndex(i);
-			if (p.objectReferenceValue != null) display.Add("[" + i + "] " + p.objectReferenceValue.name);
+			if (p.objectReferenceValue != null)
+				if (p.objectReferenceValue is CannonCollection)
+					display.Add("Collections/[" + i + "] " + p.objectReferenceValue.name);
+				else
+					display.Add("[" + i + "] " + p.objectReferenceValue.name);
 			else display.Add("[" + i + "] <null>");
 		}
 
