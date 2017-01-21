@@ -17,14 +17,16 @@ public class SelfDestructUnit : MonoBehaviour {
 
 	private void Update() {
 		if (Time.time >= timestamp + delay) {
+#if DEBUG
 			// Debugging
 			float took = Time.time - timestamp;
-			float diff = Mathf.Abs(FindObjectOfType<Cannon>().timeToFly - took);
+			float diff = Mathf.Abs(delay - took);
 
 			if (diff < lowestOff) lowestOff = diff;
 			if (diff > highestOff) highestOff = diff;
 
 			print("I LIVED IN " + (Time.time - timestamp) + " SECONDS\nLOWEST ERROR = " + lowestOff + "\nHIGHEST ERROR = " + highestOff);
+#endif
 
 			// Do it. Kill it. Good goood
 			SendMessage("OnSelfDestruct", SendMessageOptions.DontRequireReceiver);

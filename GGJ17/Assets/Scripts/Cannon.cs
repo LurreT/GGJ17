@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cannon : MonoBehaviour {
-	
-	public float timeToFly = 5;
-	
-	/// <param name="targetPosition">Position where object is supposed to land in world space.</param>
-	/// <param name="impactAfter">Number of seconds for when object is supposed to reach <paramref name="targetPosition"/>.</param>
-	public void FireAt(SelfDestructUnit prefab, Vector3 targetPosition, float impactAfter) {
+
+	public Vector3 target;
+
+	/// <param name="prefab">The unit to instantiate from (duplicate) when firing.</param>
+	/// <param name="impactAfter">Number of seconds for when object is supposed to reach <see cref="target"/>.</param>
+	public void FireAt(SelfDestructUnit prefab, float impactAfter) {
 
 		SelfDestructUnit clone = Instantiate(prefab, transform.position, Quaternion.identity);
 
@@ -18,8 +18,10 @@ public class Cannon : MonoBehaviour {
 		var body = clone.GetComponent<Rigidbody>();
 
 		// Calculate velocity
-		var delta = targetPosition - clone.transform.position;
-		body.velocity = VectorHelper.CalculateVelocity(delta, timeToFly / Time.fixedDeltaTime);
+		var delta = target - clone.transform.position;
+		body.velocity = VectorHelper.CalculateVelocity(delta, impactAfter / Time.fixedDeltaTime);
+
+		clone.transform.forward = body.velocity.normalized;
 	}
 
 }
