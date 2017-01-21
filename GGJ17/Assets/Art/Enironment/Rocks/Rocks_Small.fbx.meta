@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: ab23d623456bc43429066686b1af6b02
-timeCreated: 1485022189
+guid: 195de1ac029e11c46a4625107da81024
+timeCreated: 1485025366
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: tree2_Low
-    100002: //RootNode
-    400000: tree2_Low
-    400002: //RootNode
-    2300000: tree2_Low
-    3300000: tree2_Low
-    4300000: tree2_Low
+    100000: polySurface19
+    100002: polySurface20
+    100004: //RootNode
+    100006: polySurface27
+    400000: polySurface19
+    400002: polySurface20
+    400004: //RootNode
+    400006: polySurface27
+    2300000: polySurface20
+    2300002: polySurface27
+    3300000: polySurface20
+    3300002: polySurface27
+    4300000: polySurface20
+    4300002: polySurface27
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -74,7 +82,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

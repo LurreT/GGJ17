@@ -34,6 +34,6 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	IEnumerator AfterDeath(){
 		yield return new WaitForSeconds (3);
-		SwitchScene.GotoScene("EndScene");
+		SceneManager.LoadScene ("EndScene");
 	}
 }
