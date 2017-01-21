@@ -144,6 +144,8 @@
      <Compile Include="Assets\Scripts\Utility\SinRotator.cs" />
      <Compile Include="Assets\Scripts\Utility\UI\AlphaCheck.cs" />
      <Compile Include="Assets\Scripts\Utility\UI\AlphaRaycaster.cs" />
+     <Compile Include="Assets\Volumetric Lights\Scripts\VolumetricLight.cs" />
+     <Compile Include="Assets\Volumetric Lights\Scripts\VolumetricLightRenderer.cs" />
      <None Include="Assets\Colorful FX\Shaders\ContrastGain.shader" />
      <None Include="Assets\Colorful FX\Shaders\Kuwahara.shader" />
      <None Include="Assets\Colorful FX\Shaders\BleachBypass.shader" />
@@ -169,6 +171,7 @@
      <None Include="Assets\Colorful FX\Shaders\Led.shader" />
      <None Include="Assets\Colorful FX\Shaders\Posterize.shader" />
      <None Include="Assets\Colorful FX\Shaders\Wiggle.shader" />
+     <None Include="Assets\Volumetric Lights\Shaders\BilateralBlur.shader" />
      <None Include="Assets\Colorful FX\Shaders\Noise.shader" />
      <None Include="Assets\Colorful FX\Shaders\LensDistortionBlur.shader" />
      <None Include="Assets\Colorful FX\Shaders\Dithering.shader" />
@@ -179,6 +182,7 @@
      <None Include="Assets\Colorful FX\Shaders\Colorful.cginc" />
      <None Include="Assets\Colorful FX\Shaders\PhotoFilter.shader" />
      <None Include="Assets\Colorful FX\Shaders\HueSaturationValue.shader" />
+     <None Include="Assets\Volumetric Lights\Shaders\BlitAdd.shader" />
      <None Include="Assets\Colorful FX\Shaders\BilateralGaussianBlur.shader" />
      <None Include="Assets\Colorful FX\Shaders\ShadowsMidtonesHighlights.shader" />
      <None Include="Assets\Colorful FX\Shaders\ChromaticAberration.shader" />
@@ -195,6 +199,7 @@
      <None Include="Assets\Colorful FX\Shaders\HueFocus.shader" />
      <None Include="Assets\Colorful FX\Shaders\LookupFilter3D.shader" />
      <None Include="Assets\Colorful FX\Shaders\GrainyBlur.shader" />
+     <None Include="Assets\Volumetric Lights\Shaders\VolumetricLight.shader" />
      <None Include="Assets\Colorful FX\Shaders\Levels.shader" />
      <None Include="Assets\Colorful FX\Shaders\DirectionalBlur.shader" />
      <None Include="Assets\Colorful FX\Shaders\TVVignette.shader" />
@@ -204,6 +209,7 @@
      <None Include="Assets\Colorful FX\Shaders\AnalogTV.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\Colorful FX\Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Colorful FX\Shaders\Kuwahara.cginc" />
      <None Include="Assets\Colorful FX\Shaders\Letterbox.shader" />
      <None Include="Assets\Colorful FX\Shaders\RadialBlur.shader" />
@@ -228,6 +234,10 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{59F4A8C0-F6DE-CB98-BE2F-C03B9E38D27C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
