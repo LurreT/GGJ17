@@ -15,10 +15,10 @@ public class PlayerMovement : MonoBehaviour {
 	public float dashDelay;
 	public float groundedHeight;
 	public float drag;
+	public Animator anim;
 
 	void Start(){
 		rb = GetComponent<Rigidbody> ();
-
 	}
 
 	
@@ -86,6 +86,10 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.GetAxis ("Horizontal") > 0 || Input.GetAxis ("Vertical") > 0 || Input.GetAxis ("Horizontal") < 0 || Input.GetAxis ("Vertical") < 0) {
 			transform.forward = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
 		}
+
+
+		anim.SetFloat ("Blend", rb.velocity.magnitude / speed);
+
 	}
 	IEnumerator JumpDelay(){
 		yield return new WaitForSeconds (jumpDelay);

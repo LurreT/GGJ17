@@ -22,10 +22,12 @@ public class PlayerHealth : MonoBehaviour {
 			Death ();
 		}
 		heart [health].gameObject.SetActive (false);
+
 		camShake.Shake(1);
 	}
 	void Death(){
 		GetComponent<PlayerMovement> ().enabled = false;
+		GetComponent<PlayerMovement> ().anim.enabled = false;
 		GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
 	}
 }
