@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 
-		if (Input.GetAxis ("Horizontal") == 0 && Input.GetAxis ("Vertical") == 0 && !justDashed) {
+		if (Input.GetAxis ("Horizontal") == 0 && Input.GetAxis ("Vertical") == 0) {
 			rb.velocity = new Vector3 (0,rb.velocity.y,0);
 		}
 
@@ -84,9 +84,7 @@ public class PlayerMovement : MonoBehaviour {
 			StartCoroutine (DashDelay ());
 		}
 
-		if (Input.GetAxis ("Horizontal") > 0 || Input.GetAxis ("Vertical") > 0 || Input.GetAxis ("Horizontal") < 0 || Input.GetAxis ("Vertical") < 0) {
-			transform.forward = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
-		}
+
 	}
 	IEnumerator JumpDelay(){
 		yield return new WaitForSeconds (jumpDelay);

@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 7bf0063fa58a06443abaa8b764db382b
+timeCreated: 1484956742
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BackWing
+    100002: Fin
+    100004: Fin1
+    100006: Fin2
+    100008: Fin3
+    100010: Head
+    100012: Hips
+    100014: Jaw
+    100016: LeftEye
+    100018: LeftLip
+    100020: LeftMouth
+    100022: LeftMouth2
+    100024: LeftWing
+    100026: LeftWing1
+    100028: LeftWing2
+    100030: LeftWing3
+    100032: LowerLip
+    100034: LowerMouth
+    100036: LowerMouth1
+    100038: LowerTail
+    100040: LowerTail1
+    100042: LowerTail2
+    100044: Mesh
+    100046: Reference
+    100048: RightEye
+    100050: RightLip
+    100052: RightMouth
+    100054: RightMouth2
+    100056: RightWing
+    100058: RightWing1
+    100060: RightWing2
+    100062: RightWing3
+    100064: //RootNode
+    100066: UpperLip
+    100068: UpperMouth
+    100070: UpperMouth2
+    100072: UpperTail
+    100074: UpperTail1
+    100076: UpperTail2
+    400000: BackWing
+    400002: Fin
+    400004: Fin1
+    400006: Fin2
+    400008: Fin3
+    400010: Head
+    400012: Hips
+    400014: Jaw
+    400016: LeftEye
+    400018: LeftLip
+    400020: LeftMouth
+    400022: LeftMouth2
+    400024: LeftWing
+    400026: LeftWing1
+    400028: LeftWing2
+    400030: LeftWing3
+    400032: LowerLip
+    400034: LowerMouth
+    400036: LowerMouth1
+    400038: LowerTail
+    400040: LowerTail1
+    400042: LowerTail2
+    400044: Mesh
+    400046: Reference
+    400048: RightEye
+    400050: RightLip
+    400052: RightMouth
+    400054: RightMouth2
+    400056: RightWing
+    400058: RightWing1
+    400060: RightWing2
+    400062: RightWing3
+    400064: //RootNode
+    400066: UpperLip
+    400068: UpperMouth
+    400070: UpperMouth2
+    400072: UpperTail
+    400074: UpperTail1
+    400076: UpperTail2
+    4300000: Mesh
+    9500000: //RootNode
+    13700000: Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
