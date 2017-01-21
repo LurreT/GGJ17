@@ -6,25 +6,26 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_Elephant
+  m_Name: M_Grass Red
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _METALLICGLOSSMAP _NORMALMAP
+  m_ShaderKeywords: _ALPHATEST_ON _EMISSION
   m_LightmapFlags: 1
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 2800000, guid: 54645f0accfcbf0428865a18b5141a03, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _DetailAlbedoMap
       second:
-        m_Texture: {fileID: 2800000, guid: 65673da89e794b5418a911ab2572296e, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -42,25 +43,25 @@ Material:
     - first:
         name: _EmissionMap
       second:
-        m_Texture: {fileID: 2800000, guid: 2ea54ee445829d6458fd74f9de21845d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: 7da9a65998830f14a87eb8a571b5787a, type: 3}
+        m_Texture: {fileID: 2800000, guid: f1322d3abd928f14a9a8c75b6064927f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
       second:
-        m_Texture: {fileID: 2800000, guid: ea24f6d46a0de884db05adb5891253b7, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _OcclusionMap
       second:
-        m_Texture: {fileID: 2800000, guid: 65673da89e794b5418a911ab2572296e, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -75,7 +76,7 @@ Material:
       second: 1
     - first:
         name: _Cutoff
-      second: 0.5
+      second: 0.44
     - first:
         name: _DetailNormalMapScale
       second: 1
@@ -87,7 +88,7 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0.5
+      second: 0
     - first:
         name: _GlossyReflections
       second: 1
@@ -96,7 +97,7 @@ Material:
       second: 0
     - first:
         name: _Mode
-      second: 0
+      second: 1
     - first:
         name: _OcclusionStrength
       second: 1
@@ -121,7 +122,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.61310554, g: 0.666785, b: 0.7941176, a: 1}
+      second: {r: 0.62271816, g: 0.11764705, b: 1, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 0.5735294, g: 0.5735294, b: 0.5735294, a: 1}
+      second: {r: 0, g: 0, b: 0, a: 1}
