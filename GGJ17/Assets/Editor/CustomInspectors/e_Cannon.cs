@@ -2,6 +2,7 @@
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 [CanEditMultipleObjects, CustomEditor(typeof(Cannon))]
 public class e_Cannon : Editor {
@@ -14,13 +15,18 @@ public class e_Cannon : Editor {
 	void OnEnable() {
 		mat2 = new Material(Shader.Find("Sprites/Default"));
 		mat2.color = new Color(1f, 0f, 0f, 0.1f);
+		EditorUtility.SetDirty(target);
 	}
 
 	void OnDisable() {
 		DestroyImmediate(mat2);
 	}
 
+	public override bool RequiresConstantRepaint() {
+		return true;
+	}
 	void OnSceneGUI() {
+
 		if (!move) return;
 
 		Event e = Event.current;
