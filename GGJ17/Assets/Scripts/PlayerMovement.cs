@@ -88,15 +88,10 @@ public class PlayerMovement : MonoBehaviour {
 		}
 		Debug.Log ("isGrounded: " + isGrounded);
 
-		if (Input.GetAxis ("Jump") > 0.5f && isGrounded) {
-			rb.AddForce (Vector3.up * jumpForce);
-			justJumped = true;
+		if ((Input.GetAxis ("Jump") > 0.5f || Input.GetAxis ("Submit") > 0) && !justDashed) {
+			rb.velocity = Vector3.up * jumpForce + transform.forward * dashForce;
 			isGrounded = false;
 			anim.SetBool ("isGrounded", false);
-			StartCoroutine (JumpDelay ());
-		}
-		if (Input.GetAxis ("Submit") > 0 && !justDashed) {
-			rb.AddForce (transform.forward * dashForce);
 			justDashed = true;
 			anim.SetTrigger ("Dash");
 			StartCoroutine (DashDelay ());

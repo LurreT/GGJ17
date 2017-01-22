@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Lukas scene.unity
   - enabled: 1
     path: Assets/EndScene.unity
+  - enabled: 1
+    path: Assets/WinScene.unity

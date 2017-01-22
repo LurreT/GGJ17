@@ -10,6 +10,8 @@ public class ArtilleryMaster : MonoBehaviour {
 
 	public Animator activeBoolOnWin;
 	public string animBoolName = "TriggerAnim";
+	[SceneDropDown]
+	public string winScene;
 
 	public bool timeByBPM;
 	[HideInInspector]
@@ -107,7 +109,8 @@ public class ArtilleryMaster : MonoBehaviour {
 		// should start echo effect?
 		yield return new WaitWhile(() => isPlaying && audio.clip.length - audio.time > echoTime);
 
-		if (isPlaying) {
+		bool songFinished = isPlaying;
+		if (songFinished) {
 			//==========================
 			// HAS NOT BEEN INTERRUPTED
 
@@ -140,6 +143,11 @@ public class ArtilleryMaster : MonoBehaviour {
 		}
 
 		Destroy(audio.gameObject);
+
+		if (songFinished && !string.IsNullOrEmpty(winScene)) {
+
+			SwitchScene.GotoScene (winScene);
+		}
 	}
 
 	[System.Serializable]

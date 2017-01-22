@@ -379,6 +379,8 @@ GameObject:
   - component: {fileID: 54050596386413384}
   - component: {fileID: 114165853949645332}
   - component: {fileID: 114464152644361916}
+  - component: {fileID: 114431454248522194}
+  - component: {fileID: 114149373251201504}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -1943,6 +1945,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114149373251201504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458082948945428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7056462bcd3b761448158205e5cf5da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 82604841000794322, guid: 9f1c9966d29288547a6936864499e19a, type: 2}
+  sound_impact1: {fileID: 8300000, guid: d0992119bd77d994c86f78ee1de8aff1, type: 3}
+  sound_impact2: {fileID: 8300000, guid: f07c6a92ab0c6be4a993df5008f4bb1f, type: 3}
 --- !u!114 &114165853949645332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1955,13 +1971,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6.04
-  jumpForce: 1250
-  dashForce: 1250
+  jumpForce: 15
+  dashForce: 25
   jumpDelay: 1
   dashDelay: 1
   groundedHeight: 0.5
   drag: 1
   anim: {fileID: 95577167222628180}
+--- !u!114 &114431454248522194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458082948945428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b153294fbe8f842aec5416968be272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveTime: 1
 --- !u!114 &114464152644361916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2152,7 +2180,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e4f9af7928bcbba48b078c5288796206, type: 2}
+  - {fileID: 2100000, guid: 6462a305083a9d44bb44afb97955cf40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
