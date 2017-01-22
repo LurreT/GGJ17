@@ -376,11 +376,9 @@ GameObject:
   - component: {fileID: 33951260431098422}
   - component: {fileID: 23261101425677090}
   - component: {fileID: 65269030122612108}
-  - component: {fileID: 135799910925860918}
   - component: {fileID: 54050596386413384}
   - component: {fileID: 114165853949645332}
   - component: {fileID: 114464152644361916}
-  - component: {fileID: 114409820053100272}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -1563,11 +1561,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1458082948945428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -8.63, y: 1.46, z: -9.9}
-=======
   m_LocalPosition: {x: 1.61, y: 1.46, z: -9.9}
->>>>>>> ece6cd48317926632389e934c2cbc08cd59da9fa
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4378931279777998}
@@ -1926,9 +1920,9 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1458082948945428}
-  m_Material: {fileID: 13400000, guid: 085401c83d4fd7c449ca1b75bc9fa56e, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 0.86192584, z: 1}
   m_Center: {x: 0, y: 0.010962844, z: 0}
@@ -1968,18 +1962,6 @@ MonoBehaviour:
   groundedHeight: 0.5
   drag: 1
   anim: {fileID: 95577167222628180}
---- !u!114 &114409820053100272
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458082948945428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b153294fbe8f842aec5416968be272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveTime: 0
 --- !u!114 &114464152644361916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2001,18 +1983,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   camShake: {fileID: 0}
---- !u!135 &135799910925860918
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458082948945428}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.83
-  m_Center: {x: 0, y: 0.38, z: 0}
 --- !u!136 &136020738326202260
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2182,7 +2152,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6462a305083a9d44bb44afb97955cf40, type: 2}
+  - {fileID: 2100000, guid: e4f9af7928bcbba48b078c5288796206, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
