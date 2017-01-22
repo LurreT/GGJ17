@@ -11924,6 +11924,18 @@ MonoBehaviour:
     unitIndex: 0
     timestamp: 99
     flytime: 0
+  - spawnerIndex: 15
+    unitIndex: 0
+    timestamp: 105
+    flytime: 0
+  - spawnerIndex: 17
+    unitIndex: 0
+    timestamp: 105
+    flytime: 0
+  - spawnerIndex: -1
+    unitIndex: 1
+    timestamp: 104
+    flytime: 3
 --- !u!114 &114407820353786738
 MonoBehaviour:
   m_ObjectHideFlags: 1

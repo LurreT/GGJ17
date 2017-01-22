@@ -8,7 +8,7 @@ public class ShockWave : MonoBehaviour {
 	public float selfDestructIn;
 
 	void Start(){
-		StartCoroutine (SelfDestruct ());
+		Destroy(transform.root.gameObject, selfDestructIn);
 	}
 
 	void OnTriggerEnter(Collider col){
@@ -17,9 +17,5 @@ public class ShockWave : MonoBehaviour {
 			ph.Damage ();
 		}
 	}
-
-	IEnumerator SelfDestruct(){
-		yield return new WaitForSeconds (selfDestructIn);
-		Destroy (transform.parent.parent.gameObject);
-	}
+	
 }

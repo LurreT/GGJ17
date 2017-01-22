@@ -1076,7 +1076,7 @@ MonoBehaviour:
   shadowPrefab: {fileID: 119999463675326350, guid: 7d9a225564da41a4884d5d3f304330ff,
     type: 2}
   shadowProjOffset: 5
-  shockWave: {fileID: 1879534202214400, guid: 86ca7e39a80dfbb49ac52fca17fe8043, type: 2}
+  shockWave: {fileID: 1806709671172348, guid: 78fd3ed25bac168478b37d5a938155d1, type: 2}
 --- !u!137 &137714374726376620
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

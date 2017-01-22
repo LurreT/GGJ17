@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e50e807be3c3464286ff0c111dc34fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundOnDeath: 0
   shadowPrefab: {fileID: 119999463675326350, guid: 7d9a225564da41a4884d5d3f304330ff,
     type: 2}
   shadowProjOffset: 5

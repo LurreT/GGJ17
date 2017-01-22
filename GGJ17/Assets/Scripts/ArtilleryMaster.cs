@@ -7,6 +7,10 @@ public class ArtilleryMaster : MonoBehaviour {
 
 	public AudioSource audioPrefab;
 	public float echoTime = 2.5f;
+
+	public Animator activeBoolOnWin;
+	public string animBoolName = "TriggerAnim";
+
 	public bool timeByBPM;
 	[HideInInspector]
 	public int bpm = 120;
@@ -103,6 +107,18 @@ public class ArtilleryMaster : MonoBehaviour {
 		// should start echo effect?
 		yield return new WaitWhile(() => isPlaying && audio.clip.length - audio.time > echoTime);
 
+		if (isPlaying) {
+			//==========================
+			// HAS NOT BEEN INTERRUPTED
+
+			// This runs if song naturally ends. i.e. player didn't die.
+
+			if (activeBoolOnWin)
+				activeBoolOnWin.SetBool(animBoolName, true);
+
+			// HAS NOT BEEN INTERRUPTED
+			//==========================
+		}
 		isPlaying = false;
 
 		var echo = audio.gameObject.AddComponent<AudioEchoFilter>();

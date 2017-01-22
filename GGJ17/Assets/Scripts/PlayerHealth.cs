@@ -26,7 +26,8 @@ public class PlayerHealth : MonoBehaviour {
 
 		heart [health].gameObject.SetActive (false);
 
-		camShake.Shake(.5f);
+		camShake = FindObjectOfType<CameraShake>();
+		if (camShake != null) camShake.Shake(.5f);
 		PlayerDamageIndicator.IndicateSomeDamageYao();
 	}
 	void Death(){
