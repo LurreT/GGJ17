@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour {
 		for (int i = 0; i < health; i++) {
 			heart[i].gameObject.SetActive(true);
 		}
+		Physics.IgnoreLayerCollision (8, 9);
 	}
 
 	public void Damage(){
@@ -28,9 +29,10 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	void Death(){
 		GetComponent<PlayerMovement> ().enabled = false;
-		GetComponent<PlayerMovement> ().anim.enabled = false;
+//		GetComponent<PlayerMovement> ().anim.enabled = false;
 		GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
 		StartCoroutine (AfterDeath ());
+		GetComponent<PlayerMovement> ().anim.SetBool ("Dead", true);
 	}
 	IEnumerator AfterDeath(){
 		yield return new WaitForSeconds (3);
