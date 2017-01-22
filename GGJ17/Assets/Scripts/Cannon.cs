@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ExtensionMethods;
 
-[ExecuteInEditMode]
 public class Cannon : MonoBehaviour {
 
 	[HideInInspector]
@@ -16,12 +16,14 @@ public class Cannon : MonoBehaviour {
 
 		clone.delay = impactAfter;
 		clone.target = target;
+		// Add randomization
+		clone.target += Random.Range(0, 360).FromDegrees(Random.Range(0, 8)).xzy(0);
 
 		// Get components
 		var body = clone.GetComponent<Rigidbody>();
 
 		// Calculate velocity
-		var delta = target - clone.transform.position;
+		var delta = clone.target - clone.transform.position;
 		body.velocity = VectorHelper.CalculateVelocity(delta, impactAfter / Time.fixedDeltaTime);
 
 		clone.transform.forward = body.velocity.normalized;

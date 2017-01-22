@@ -55,6 +55,7 @@ public class e_CannonCollection : Editor {
 	private int DrawPopupThingie(Rect rect, SerializedProperty prop, List<Object> basedOf) {
 
 		List<string> display = new List<string>();
+		display.Add("~RANDOM~");
 
 		// fill array
 		for (int i = 0; i < basedOf.Count; i++) {
@@ -68,10 +69,10 @@ public class e_CannonCollection : Editor {
 		}
 
 		// check which is selected
-		int selected = prop.intValue;
+		int selected = prop.intValue + 1;
 		selected = EditorGUI.Popup(rect, selected, display.ToArray());
 
-		return selected;
+		return selected - 1;
 	}
 
 	public override void OnInspectorGUI() {
@@ -103,6 +104,13 @@ public class e_CannonCollection : Editor {
 					}
 
 				} while (any);
+
+			}
+			if (GUILayout.Button("Clear strikes")) {
+				if (EditorUtility.DisplayDialog("Warning!",
+					"Are you sure you want to clear the list?", "Clear it", "Abort")) {
+					script.strikes.Clear();
+				}
 
 			}
 		}

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-[CanEditMultipleObjects, CustomEditor(typeof(Cannon))]
+[CanEditMultipleObjects, CustomEditor(typeof(Cannon), false)]
 public class e_Cannon : Editor {
 
 	private bool move;
@@ -146,7 +146,9 @@ public class e_Cannon : Editor {
 
 		DrawDefaultInspector();
 
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("target"));
+		serializedObject.Update();
+		var prop = serializedObject.FindProperty("target");
+		prop.vector3Value = EditorGUILayout.Vector3Field(prop.displayName, prop.vector3Value);
 		EditorGUILayout.Space();
 
 		if (Selection.transforms.Length > 0) {
@@ -156,7 +158,7 @@ public class e_Cannon : Editor {
 			}
 			GUI.enabled = true;
 		}
-
+		serializedObject.ApplyModifiedProperties();
 	}
 
 }

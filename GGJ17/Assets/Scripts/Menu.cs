@@ -6,12 +6,18 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour {
 
 	public GameObject pauseMenu;
+	[SceneDropDown]
+	public string sceneOnStart;
 
 	public void StartGame(){
-		SceneManager.LoadScene (2);
+		SwitchScene.GotoScene(sceneOnStart);
 	}
 	public void ExitGame(){
-		Application.CancelQuit ();
+#if UNITY_EDITOR
+		UnityEditor.EditorApplication.isPlaying = false;
+#else
+		Application.Quit ();
+#endif
 	}
 	public void Pause(){
 		Time.timeScale = 0;

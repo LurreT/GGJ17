@@ -21,21 +21,26 @@ public class PlayerHealth : MonoBehaviour {
 	public void Damage(){
 		health--;
 		if (health == 0) {
-			Death ();
-		}
+			Death();
+		} else if (health < 0)
+			return;
+
 		heart [health].gameObject.SetActive (false);
 
-		camShake.Shake(1);
+		camShake = FindObjectOfType<CameraShake>();
+		if (camShake != null) camShake.Shake(.5f);
+		PlayerDamageIndicator.IndicateSomeDamageYao();
 	}
 	void Death(){
 		GetComponent<PlayerMovement> ().enabled = false;
 //		GetComponent<PlayerMovement> ().anim.enabled = false;
 		GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
+		FindObjectOfType<ArtilleryMaster>().StopSongShooting();
 		StartCoroutine (AfterDeath ());
 		GetComponent<PlayerMovement> ().anim.SetBool ("Dead", true);
 	}
 	IEnumerator AfterDeath(){
 		yield return new WaitForSeconds (3);
-		SceneManager.LoadScene ("EndScene");
+		SwitchScene.GotoScene("EndScene");
 	}
 }
