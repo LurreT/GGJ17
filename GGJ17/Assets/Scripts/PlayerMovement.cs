@@ -21,6 +21,17 @@ public class PlayerMovement : MonoBehaviour {
 		rb = GetComponent<Rigidbody> ();
 	}
 
+	void Update(){
+		if (Physics.Raycast (transform.position, -Vector3.up, groundedHeight)) {
+			if (!justJumped) {
+				isGrounded = true;
+				anim.SetBool ("isGrounded", true);
+			}
+		} else {
+			isGrounded = false;
+			anim.SetBool ("isGrounded", false);
+		}
+	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -63,13 +74,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		Debug.DrawRay (transform.position, -Vector3.up * groundedHeight, Color.red);
 
-		if (Physics.Raycast (transform.position, -Vector3.up, groundedHeight)) {
-			if (!justJumped) {
-				isGrounded = true;
-			}
-		} else {
-			isGrounded = false;
-		}
+
 		if (!isGrounded) {
 //			rb.velocity += 	
 		}
@@ -79,11 +84,13 @@ public class PlayerMovement : MonoBehaviour {
 			rb.AddForce (Vector3.up * jumpForce);
 			justJumped = true;
 			isGrounded = false;
+			anim.SetBool ("isGrounded", false);
 			StartCoroutine (JumpDelay ());
 		}
 		if (Input.GetAxis ("Submit") > 0 && !justDashed) {
 			rb.AddForce (transform.forward * dashForce);
 			justDashed = true;
+			anim.SetTrigger ("Dash");
 			StartCoroutine (DashDelay ());
 		}
 

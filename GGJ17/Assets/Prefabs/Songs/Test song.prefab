@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4022444334250570}
   - component: {fileID: 82997049389176892}
+  - component: {fileID: 114527503943384050}
   m_Layer: 0
   m_Name: Test song
   m_TagString: Untagged
@@ -48,7 +49,8 @@ AudioSource:
   m_GameObject: {fileID: 1543853030042848}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243793282491281154, guid: 9f8163023e638504585904bf201903e7,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 0a808c124a26edc4a89e1186d13b7dcb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -120,3 +122,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114527503943384050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543853030042848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5d4b263dfe7824aa1721a4b6613c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

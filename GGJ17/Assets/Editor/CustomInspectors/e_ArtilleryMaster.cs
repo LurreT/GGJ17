@@ -34,7 +34,7 @@ public class e_ArtilleryMaster : Editor {
 			Rect indexRect = new Rect(rect.x, rect.y, 24, rect.height);
 			Rect itemRect = new Rect(indexRect.xMax + 4, rect.y, rect.width - indexRect.width - 4, rect.height);
 
-			EditorGUI.LabelField(indexRect, "[" + index + "]");
+			EditorGUI.LabelField(indexRect, index.ToString());
 			EditorGUI.PropertyField(itemRect, item, GUIContent.none);
 		};
 
@@ -54,7 +54,7 @@ public class e_ArtilleryMaster : Editor {
 			Rect indexRect = new Rect(rect.x, rect.y, 24, rect.height);
 			Rect itemRect = new Rect(indexRect.xMax + 4, rect.y, rect.width - indexRect.width - 4, rect.height);
 
-			EditorGUI.LabelField(indexRect, "[" + index + "]");
+			EditorGUI.LabelField(indexRect, index.ToString());
 			EditorGUI.PropertyField(itemRect, item, GUIContent.none);
 		};
 
@@ -99,19 +99,24 @@ public class e_ArtilleryMaster : Editor {
 				combined.max = Vector2.Max(spawnerRect.max, unitRect.max);
 
 				spawner.intValue = DrawPopupThingie(combined, spawner, spawners.serializedProperty);
+
+				EditorGUI.PropertyField(timestampRect, timestamp, GUIContent.none);
+				flytime.floatValue = 0;
 			} else {
 				if (flytime.floatValue <= float.Epsilon) flytime.floatValue = 3;
 				spawner.intValue = DrawPopupThingie(spawnerRect, spawner, spawners.serializedProperty);
 				unit.intValue = DrawPopupThingie(unitRect, unit, units.serializedProperty);
+
+				EditorGUI.PropertyField(timestampRect, timestamp, GUIContent.none);
+				EditorGUI.PropertyField(flytimeRect, flytime, GUIContent.none);
 			}
-			EditorGUI.PropertyField(timestampRect, timestamp, GUIContent.none);
-			EditorGUI.PropertyField(flytimeRect, flytime, GUIContent.none);
 		};
 	}
 
 	private int DrawPopupThingie(Rect rect, SerializedProperty prop, SerializedProperty basedOf) {
 
 		List<string> display = new List<string>();
+		display.Add("~RANDOM~");
 
 		// fill array
 		for (int i = 0; i < basedOf.arraySize; i++) {
@@ -125,10 +130,10 @@ public class e_ArtilleryMaster : Editor {
 		}
 
 		// check which is selected
-		int selected = prop.intValue;
+		int selected = prop.intValue + 1;
 		selected = EditorGUI.Popup(rect, selected, display.ToArray());
 		
-		return selected;
+		return selected - 1;
 	}
 
 	public override void OnInspectorGUI() {
@@ -147,8 +152,23 @@ public class e_ArtilleryMaster : Editor {
 
 		EditorGUILayout.Space();
 		units.DoLayoutList();
+
+		if (GUILayout.Button("Clear units")) {
+			if (EditorUtility.DisplayDialog("Warning!",
+				"Are you sure you want to clear the list of units?", "I am oh so sure!", "Cancel")) {
+				(target as ArtilleryMaster).units.Clear();
+			}
+		}
+
 		EditorGUILayout.Space();
 		spawners.DoLayoutList();
+
+		if (GUILayout.Button("Clear spawners")) {
+			if (EditorUtility.DisplayDialog("Warning!",
+				"Are you sure you want to clear the list of spawners?", "Spawners, be-gone!", "Cancel")) {
+				(target as ArtilleryMaster).spawners.Clear();
+			}
+		}
 		EditorGUILayout.Space();
 		strikes.DoLayoutList();
 		EditorGUILayout.Space();
@@ -172,6 +192,12 @@ public class e_ArtilleryMaster : Editor {
 
 			} while (any);
 
+			if (GUILayout.Button("Clear strikes")) {
+				if (EditorUtility.DisplayDialog("Warning!",
+					"Are you sure you want to clear the list of strikes?", "Clear it", "Cancel")) {
+					(target as ArtilleryMaster).strikes.Clear();
+				}
+			}
 		}
 
 		EditorGUILayout.Space();

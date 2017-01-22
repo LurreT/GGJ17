@@ -1,17 +1,18 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
+﻿<Properties StartupItem="GGJ17.Plugins.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\CustomInspectors\e_Cannon.cs">
     <Files>
-      <File FileName="Assets\Menu.cs" Line="11" Column="39" />
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="102" Column="37" />
-      <File FileName="Assets\Scripts\PlayerHealth.cs" Line="37" Column="15" />
+      <File FileName="Assets\Menu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="93" Column="29" />
+      <File FileName="Assets\Scripts\PlayerHealth.cs" Line="18" Column="37" />
       <File FileName="Assets\Scripts\ShockWave.cs" Line="23" Column="36" />
       <File FileName="Assets\Scripts\CameraController.cs" Line="32" Column="1" />
       <File FileName="Assets\Scripts\CameraShake.cs" Line="18" Column="22" />
-      <File FileName="Assets\Scripts\SelfDestructUnit.cs" Line="30" Column="1" />
-      <File FileName="Assets\Scripts\Cannon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Editor\CustomInspectors\e_ArtilleryMaster.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SelfDestructUnit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cannon.cs" Line="27" Column="54" />
+      <File FileName="Assets\Editor\CustomInspectors\e_ArtilleryMaster.cs" Line="94" Column="7" />
       <File FileName="Assets\Scripts\SceneSwitch.cs" Line="80" Column="24" />
+      <File FileName="Assets\Editor\CustomInspectors\e_Cannon.cs" Line="149" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

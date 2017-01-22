@@ -44,6 +44,7 @@ ModelImporter:
     100072: UpperTail
     100074: UpperTail1
     100076: UpperTail2
+    100078: LowerChin
     400000: BackWing
     400002: Fin
     400004: Fin1
@@ -83,7 +84,9 @@ ModelImporter:
     400072: UpperTail
     400074: UpperTail1
     400076: UpperTail2
+    400078: LowerChin
     4300000: Mesh
+    7400000: Take 001
     9500000: //RootNode
     13700000: Mesh
   materials:
