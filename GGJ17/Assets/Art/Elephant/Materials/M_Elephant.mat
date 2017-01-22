@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Elephant
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+  m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -24,7 +24,7 @@ Material:
     - first:
         name: _DetailAlbedoMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fb0ab35067207c5469c5ea70d09b7388, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -121,7 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.7794118, g: 0.8448276, b: 1, a: 1}
+      second: {r: 0.5341155, g: 0.5697896, b: 0.6544118, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0.5735294, g: 0.5735294, b: 0.5735294, a: 1}
