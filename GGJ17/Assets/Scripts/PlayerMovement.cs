@@ -17,12 +17,19 @@ public class PlayerMovement : MonoBehaviour {
 	public float drag;
 	public Animator anim;
 
+	RaycastHit hit;
+
 	void Start(){
 		rb = GetComponent<Rigidbody> ();
 	}
 
 	void Update(){
-		if (Physics.Raycast (transform.position, -Vector3.up, groundedHeight)) {
+		if (Physics.Raycast (transform.position, -Vector3.up, out hit, groundedHeight)) {
+			print (hit.collider);
+			if (hit.collider.gameObject.tag == "Rock") {
+				print ("Rock");
+//				rb.AddForce (new Vector3(Random.Range(-2,2),0,Random.Range(-2,2))*2000);
+			}
 			if (!justJumped) {
 				isGrounded = true;
 				anim.SetBool ("isGrounded", true);
@@ -31,6 +38,7 @@ public class PlayerMovement : MonoBehaviour {
 			isGrounded = false;
 			anim.SetBool ("isGrounded", false);
 		}
+		rb.angularVelocity = new Vector3 (0, 0, 0);
 	}
 	
 	// Update is called once per frame
