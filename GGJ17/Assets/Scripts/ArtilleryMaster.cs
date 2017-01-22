@@ -8,6 +8,7 @@ public class ArtilleryMaster : MonoBehaviour {
 	public AudioSource audioPrefab;
 	public float echoTime = 2.5f;
 
+
 	public Animator activeBoolOnWin;
 	public string animBoolName = "TriggerAnim";
 	[SceneDropDown]
@@ -60,6 +61,7 @@ public class ArtilleryMaster : MonoBehaviour {
 					});
 				}
 				strikes.RemoveAt(i);
+
 			}
 		}
 
@@ -94,6 +96,7 @@ public class ArtilleryMaster : MonoBehaviour {
 				if (Time.time - start >= (s.timestamp - s.flytime)/bps) {
 					// Your time has come
 					s.spawner.FireAt(s.unit, s.flytime/bps);
+					Debug.Log(s.timestamp);
 					return true;
 				} else return false;
 			});

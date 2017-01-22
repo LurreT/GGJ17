@@ -107,6 +107,7 @@ ModelImporter:
     100198: pCube515
     100200: pCube516
     100202: //RootNode
+    100204: WaveEffect
     400000: pCube416
     400002: pCube417
     400004: pCube418
@@ -209,6 +210,7 @@ ModelImporter:
     400198: pCube515
     400200: pCube516
     400202: //RootNode
+    400204: WaveEffect
     2300000: pCube416
     2300002: pCube417
     2300004: pCube418
@@ -310,6 +312,7 @@ ModelImporter:
     2300196: pCube514
     2300198: pCube515
     2300200: pCube516
+    2300202: WaveEffect
     3300000: pCube416
     3300002: pCube417
     3300004: pCube418
@@ -411,6 +414,7 @@ ModelImporter:
     3300196: pCube514
     3300198: pCube515
     3300200: pCube516
+    3300202: WaveEffect
     4300000: pCube516
     4300002: pCube515
     4300004: pCube514
@@ -512,6 +516,7 @@ ModelImporter:
     4300196: pCube418
     4300198: pCube417
     4300200: pCube416
+    4300202: WaveEffect
     7400000: Take 001
     9500000: //RootNode
   materials:

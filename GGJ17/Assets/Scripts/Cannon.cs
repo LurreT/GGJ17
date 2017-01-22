@@ -7,6 +7,7 @@ public class Cannon : MonoBehaviour {
 
 	[HideInInspector]
 	public Vector3 target;
+	public Animator fishAnim;
 
 	/// <param name="prefab">The unit to instantiate from (duplicate) when firing.</param>
 	/// <param name="impactAfter">Number of seconds for when object is supposed to reach <see cref="target"/>.</param>
@@ -27,6 +28,9 @@ public class Cannon : MonoBehaviour {
 		body.velocity = VectorHelper.CalculateVelocity(delta, impactAfter / Time.fixedDeltaTime);
 
 		clone.transform.forward = body.velocity.normalized;
+
+		//fish launch anim
+		fishAnim.SetTrigger("Launch");
 	}
 
 #if UNITY_EDITOR

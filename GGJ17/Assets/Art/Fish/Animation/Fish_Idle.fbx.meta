@@ -313,7 +313,321 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 110
+      lastFrame: 138
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fish_Rig
+        weight: 1
+      - path: Fish_Rig/character_all
+        weight: 1
+      - path: Fish_Rig/character_all/character_move
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/LowerTail_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/LowerTail_driver_ctGRP/LowerTail_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/LowerTail_driver_ctGRP/LowerTail_driver_CTRL/LowerTail1_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/LowerTail_driver_ctGRP/LowerTail_driver_CTRL/LowerTail1_driver_ctGRP/LowerTail1_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/UpperTail_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/UpperTail_driver_ctGRP/UpperTail_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/UpperTail_driver_ctGRP/UpperTail_driver_CTRL/UpperTail1_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/UpperTail_driver_ctGRP/UpperTail_driver_CTRL/UpperTail1_driver_ctGRP/UpperTail1_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/UpperTail_driver_ctGRP/UpperTail_driver_CTRL/UpperTail1_driver_ctGRP/UpperTail1_driver_CTRL/UpperTail2_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/BackWing_driver_ctGRP/BackWing_driver_CTRL/UpperTail_driver_ctGRP/UpperTail_driver_CTRL/UpperTail1_driver_ctGRP/UpperTail1_driver_CTRL/UpperTail2_driver_ctGRP/UpperTail2_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/EyeCtrl_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/EyeCtrl_ctGRP/EyeCtrl
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/EyeCtrl_ctGRP/EyeCtrl/LeftEye_GRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/EyeCtrl_ctGRP/EyeCtrl/LeftEye_GRP/LeftEye_Ctrl
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/EyeCtrl_ctGRP/EyeCtrl/RightEye_GRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/EyeCtrl_ctGRP/EyeCtrl/RightEye_GRP/RightEye_Ctrl
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Fin_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Fin_driver_ctGRP/Fin_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Fin_driver_ctGRP/Fin_driver_CTRL/Fin1_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Fin_driver_ctGRP/Fin_driver_CTRL/Fin1_driver_ctGRP/Fin1_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Fin_driver_ctGRP/Fin_driver_CTRL/Fin1_driver_ctGRP/Fin1_driver_CTRL/Fin2_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Fin_driver_ctGRP/Fin_driver_CTRL/Fin1_driver_ctGRP/Fin1_driver_CTRL/Fin2_driver_ctGRP/Fin2_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Fin_driver_ctGRP/Fin_driver_CTRL/Fin1_driver_ctGRP/Fin1_driver_CTRL/Fin2_driver_ctGRP/Fin2_driver_CTRL/Fin3_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Fin_driver_ctGRP/Fin_driver_CTRL/Fin1_driver_ctGRP/Fin1_driver_CTRL/Fin2_driver_ctGRP/Fin2_driver_CTRL/Fin3_driver_ctGRP/Fin3_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LeftMouth_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LeftMouth_driver_ctGRP/LeftMouth_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerChin_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerChin_driver_ctGRP/LowerChin_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerMouth_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerMouth_driver_ctGRP/LowerMouth_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerMouth_driver_ctGRP/LowerMouth_driver_CTRL/LowerMouth1_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerMouth_driver_ctGRP/LowerMouth_driver_CTRL/LowerMouth1_driver_ctGRP/LowerMouth1_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerMouth_driver_ctGRP/LowerMouth_driver_CTRL/LowerMouth1_driver_ctGRP/LowerMouth1_driver_CTRL/Jaw_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerMouth_driver_ctGRP/LowerMouth_driver_CTRL/LowerMouth1_driver_ctGRP/LowerMouth1_driver_CTRL/Jaw_driver_ctGRP/Jaw_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerMouth_driver_ctGRP/LowerMouth_driver_CTRL/LowerMouth1_driver_ctGRP/LowerMouth1_driver_CTRL/Jaw_driver_ctGRP/Jaw_driver_CTRL/LowerLip_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/LowerMouth_driver_ctGRP/LowerMouth_driver_CTRL/LowerMouth1_driver_ctGRP/LowerMouth1_driver_CTRL/Jaw_driver_ctGRP/Jaw_driver_CTRL/LowerLip_driver_ctGRP/LowerLip_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/RightMouth_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/RightMouth_driver_ctGRP/RightMouth_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/UpperMouth_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/UpperMouth_driver_ctGRP/UpperMouth_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/UpperMouth_driver_ctGRP/UpperMouth_driver_CTRL/UpperMouth2_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/Head_driver_ctGRP/Head_driver_CTRL/UpperMouth_driver_ctGRP/UpperMouth_driver_CTRL/UpperMouth2_driver_ctGRP/UpperMouth2_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/LeftWing_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/LeftWing_driver_ctGRP/LeftWing_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/LeftWing_driver_ctGRP/LeftWing_driver_CTRL/LeftWing1_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/LeftWing_driver_ctGRP/LeftWing_driver_CTRL/LeftWing1_driver_ctGRP/LeftWing1_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/LeftWing_driver_ctGRP/LeftWing_driver_CTRL/LeftWing1_driver_ctGRP/LeftWing1_driver_CTRL/LeftWing2_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/LeftWing_driver_ctGRP/LeftWing_driver_CTRL/LeftWing1_driver_ctGRP/LeftWing1_driver_CTRL/LeftWing2_driver_ctGRP/LeftWing2_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/LeftWing_driver_ctGRP/LeftWing_driver_CTRL/LeftWing1_driver_ctGRP/LeftWing1_driver_CTRL/LeftWing2_driver_ctGRP/LeftWing2_driver_CTRL/LeftWing3_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/LeftWing_driver_ctGRP/LeftWing_driver_CTRL/LeftWing1_driver_ctGRP/LeftWing1_driver_CTRL/LeftWing2_driver_ctGRP/LeftWing2_driver_CTRL/LeftWing3_driver_ctGRP/LeftWing3_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/RightWing_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/RightWing_driver_ctGRP/RightWing_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/RightWing_driver_ctGRP/RightWing_driver_CTRL/RightWing1_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/RightWing_driver_ctGRP/RightWing_driver_CTRL/RightWing1_driver_ctGRP/RightWing1_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/RightWing_driver_ctGRP/RightWing_driver_CTRL/RightWing1_driver_ctGRP/RightWing1_driver_CTRL/RightWing2_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/RightWing_driver_ctGRP/RightWing_driver_CTRL/RightWing1_driver_ctGRP/RightWing1_driver_CTRL/RightWing2_driver_ctGRP/RightWing2_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/RightWing_driver_ctGRP/RightWing_driver_CTRL/RightWing1_driver_ctGRP/RightWing1_driver_CTRL/RightWing2_driver_ctGRP/RightWing2_driver_CTRL/RightWing3_driver_ctGRP
+        weight: 1
+      - path: Fish_Rig/character_all/character_move/RightWing_driver_ctGRP/RightWing_driver_CTRL/RightWing1_driver_ctGRP/RightWing1_driver_CTRL/RightWing2_driver_ctGRP/RightWing2_driver_CTRL/RightWing3_driver_ctGRP/RightWing3_driver_CTRL
+        weight: 1
+      - path: Fish_Rig/Reference_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/BackWing_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/BackWing_driver/LowerTail_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/BackWing_driver/LowerTail_driver/LowerTail1_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/BackWing_driver/LowerTail_driver/LowerTail1_driver/LowerTail2_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/BackWing_driver/UpperTail_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/BackWing_driver/UpperTail_driver/UpperTail1_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/BackWing_driver/UpperTail_driver/UpperTail1_driver/UpperTail2_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Fin_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Fin_driver/Fin1_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Fin_driver/Fin1_driver/Fin2_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Fin_driver/Fin1_driver/Fin2_driver/Fin3_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LeftEye_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LeftMouth_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LeftMouth_driver/LeftMouth2_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LeftMouth_driver/LeftMouth2_driver/LeftLip_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LowerChin_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LowerMouth_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LowerMouth_driver/LowerMouth1_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LowerMouth_driver/LowerMouth1_driver/Jaw_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/LowerMouth_driver/LowerMouth1_driver/Jaw_driver/LowerLip_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/RightEye_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/RightMouth_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/RightMouth_driver/RightMouth2_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/RightMouth_driver/RightMouth2_driver/RightLip_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/UpperMouth_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/UpperMouth_driver/UpperMouth2_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/Head_driver/UpperMouth_driver/UpperMouth2_driver/UpperLip_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/LeftWing_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/LeftWing_driver/LeftWing1_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/LeftWing_driver/LeftWing1_driver/LeftWing2_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/LeftWing_driver/LeftWing1_driver/LeftWing2_driver/LeftWing3_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/RightWing_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/RightWing_driver/RightWing1_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/RightWing_driver/RightWing1_driver/RightWing2_driver
+        weight: 1
+      - path: Fish_Rig/Reference_driver/Hips_driver/RightWing_driver/RightWing1_driver/RightWing2_driver/RightWing3_driver
+        weight: 1
+      - path: Reference
+        weight: 1
+      - path: Reference/Hips
+        weight: 1
+      - path: Reference/Hips/BackWing
+        weight: 1
+      - path: Reference/Hips/BackWing/LowerTail
+        weight: 1
+      - path: Reference/Hips/BackWing/LowerTail/LowerTail1
+        weight: 1
+      - path: Reference/Hips/BackWing/LowerTail/LowerTail1/LowerTail2
+        weight: 1
+      - path: Reference/Hips/BackWing/UpperTail
+        weight: 1
+      - path: Reference/Hips/BackWing/UpperTail/UpperTail1
+        weight: 1
+      - path: Reference/Hips/BackWing/UpperTail/UpperTail1/UpperTail2
+        weight: 1
+      - path: Reference/Hips/Fin
+        weight: 1
+      - path: Reference/Hips/Fin/Fin1
+        weight: 1
+      - path: Reference/Hips/Fin/Fin1/Fin2
+        weight: 1
+      - path: Reference/Hips/Fin/Fin1/Fin2/Fin3
+        weight: 1
+      - path: Reference/Hips/Head
+        weight: 1
+      - path: Reference/Hips/Head/LeftEye
+        weight: 1
+      - path: Reference/Hips/Head/LeftMouth
+        weight: 1
+      - path: Reference/Hips/Head/LeftMouth/LeftMouth2
+        weight: 1
+      - path: Reference/Hips/Head/LeftMouth/LeftMouth2/LeftLip
+        weight: 1
+      - path: Reference/Hips/Head/LowerChin
+        weight: 1
+      - path: Reference/Hips/Head/LowerMouth
+        weight: 1
+      - path: Reference/Hips/Head/LowerMouth/LowerMouth1
+        weight: 1
+      - path: Reference/Hips/Head/LowerMouth/LowerMouth1/Jaw
+        weight: 1
+      - path: Reference/Hips/Head/LowerMouth/LowerMouth1/Jaw/LowerLip
+        weight: 1
+      - path: Reference/Hips/Head/null1
+        weight: 1
+      - path: Reference/Hips/Head/RightEye
+        weight: 1
+      - path: Reference/Hips/Head/RightMouth
+        weight: 1
+      - path: Reference/Hips/Head/RightMouth/RightMouth2
+        weight: 1
+      - path: Reference/Hips/Head/RightMouth/RightMouth2/RightLip
+        weight: 1
+      - path: Reference/Hips/Head/UpperMouth
+        weight: 1
+      - path: Reference/Hips/Head/UpperMouth/UpperMouth2
+        weight: 1
+      - path: Reference/Hips/Head/UpperMouth/UpperMouth2/UpperLip
+        weight: 1
+      - path: Reference/Hips/LeftWing
+        weight: 1
+      - path: Reference/Hips/LeftWing/LeftWing1
+        weight: 1
+      - path: Reference/Hips/LeftWing/LeftWing1/LeftWing2
+        weight: 1
+      - path: Reference/Hips/LeftWing/LeftWing1/LeftWing2/LeftWing3
+        weight: 1
+      - path: Reference/Hips/RightWing
+        weight: 1
+      - path: Reference/Hips/RightWing/RightWing1
+        weight: 1
+      - path: Reference/Hips/RightWing/RightWing1/RightWing2
+        weight: 1
+      - path: Reference/Hips/RightWing/RightWing1/RightWing2/RightWing3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
