@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour {
 
 	public GameObject pauseMenu;
+	[SceneDropDown]
+	public string sceneOnStart;
 
 	public void StartGame(){
-		SceneManager.LoadScene (2);
+		SwitchScene.GotoScene(sceneOnStart);
 	}
 	public void ExitGame(){
 #if UNITY_EDITOR

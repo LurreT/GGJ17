@@ -21,25 +21,21 @@ public class ArtilleryMaster : MonoBehaviour {
 
 	public bool isPlaying { get; private set; }
 
-	private void Update() {
-		if (Input.GetMouseButtonDown(0)) {
-			if (!isPlaying)
-				StartSongShooting();
-			else
-				StopSongShooting();
-		}
+	private void Start() {
+		StartSongShooting(3);
 	}
 
-	public void StartSongShooting() {
+	public void StartSongShooting(float startDelay = 0) {
 		if (isPlaying) throw new System.Exception("A song is already playing from this object!");
-		StartCoroutine(SongShootingRoutine(new List<SingleStrike>(strikes)));
+		StartCoroutine(SongShootingRoutine(new List<SingleStrike>(strikes), startDelay));
 	}
 
 	public void StopSongShooting() {
 		isPlaying = false;
 	}
 
-	private IEnumerator SongShootingRoutine(List<SingleStrike> strikes) {
+	private IEnumerator SongShootingRoutine(List<SingleStrike> strikes, float startDelay = 0) {
+
 		// Import from all collections
 		var count = strikes.Count;
 		for (int i=count-1; i>=0; i--) {
@@ -78,15 +74,18 @@ public class ArtilleryMaster : MonoBehaviour {
 		var audio = Instantiate(audioPrefab);
 		audio.loop = false;
 		audio.playOnAwake = false;
+
+		yield return new WaitForSeconds(startDelay);
+
 		audio.Play();
 		isPlaying = true;
 
-		float start = Time.unscaledTime;
+		float start = Time.time;
 
 		while (strikes.Count > 0 && isPlaying) {
 			// Spawn all that needs to and remove them at the same time.
 			strikes.RemoveAll(s => {
-				if (Time.unscaledTime - start >= (s.timestamp - s.flytime)/bps) {
+				if (Time.time - start >= (s.timestamp - s.flytime)/bps) {
 					// Your time has come
 					s.spawner.FireAt(s.unit, s.flytime/bps);
 					return true;
@@ -98,7 +97,7 @@ public class ArtilleryMaster : MonoBehaviour {
 			// Wait for next strike
 			// PRETTY INEFFICIENT SYSTEM.
 			// CHECKS EVERY STRIKE EACH FRAME
-			yield return new WaitUntil(() => !isPlaying || strikes.FindIndex(s => Time.unscaledTime - start >= (s.timestamp - s.flytime)/bps) != -1);
+			yield return new WaitUntil(() => !isPlaying || strikes.FindIndex(s => Time.time - start >= (s.timestamp - s.flytime)/bps) != -1);
 		}
 
 		// should start echo effect?
@@ -118,10 +117,10 @@ public class ArtilleryMaster : MonoBehaviour {
 		audio.volume = 0;
 
 		// Fade out echo
-		start = Time.unscaledTime;
-		while (Time.unscaledTime - start < echoTime) {
+		start = Time.time;
+		while (Time.time - start < echoTime) {
 			yield return new WaitForEndOfFrame();
-			echo.wetMix = 1 - (Time.unscaledTime - start) / echoTime;
+			echo.wetMix = 1 - (Time.time - start) / echoTime;
 		}
 
 		Destroy(audio.gameObject);

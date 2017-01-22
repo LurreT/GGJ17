@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour {
 	void Start(){
 		rb = GetComponent<Rigidbody> ();
 	}
-
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -75,6 +74,8 @@ public class PlayerMovement : MonoBehaviour {
 		}
 		//Debug.Log ("isGrounded: " + isGrounded);
 
+		/*// Commented out old seperate jump and dash. New variant combines jump and dash
+		  
 		if (Input.GetAxis ("Jump") > 0.5f && isGrounded) {
 			rb.AddForce (Vector3.up * jumpForce);
 			justJumped = true;
@@ -85,6 +86,15 @@ public class PlayerMovement : MonoBehaviour {
 			rb.AddForce (transform.forward * dashForce);
 			justDashed = true;
 			StartCoroutine (DashDelay ());
+		}
+		*/
+
+
+		if ((Input.GetAxis("Jump") > 0.5f || Input.GetAxis("Submit") > 0) && isGrounded && !justDashed) {
+			rb.velocity = Vector3.up * jumpForce + transform.forward * dashForce;
+			isGrounded = false;
+			justDashed = true;
+			StartCoroutine(DashDelay());
 		}
 
 		if (Input.GetAxis ("Horizontal") > 0 || Input.GetAxis ("Vertical") > 0 || Input.GetAxis ("Horizontal") < 0 || Input.GetAxis ("Vertical") < 0) {
