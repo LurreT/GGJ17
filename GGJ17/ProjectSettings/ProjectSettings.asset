@@ -459,8 +459,10 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudServicesEnabled:
+    Build: 1
+    UNet: 1
+  cloudProjectId: eac98ed5-ff46-48cc-887f-dd7545af853f
+  projectName: GGJ17
+  organizationId: thelukazz
   cloudEnabled: 0
