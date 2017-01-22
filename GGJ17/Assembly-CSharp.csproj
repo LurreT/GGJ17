@@ -111,6 +111,11 @@
      <Compile Include="Assets\Colorful FX\Scripts\Effects\WaveDistortion.cs" />
      <Compile Include="Assets\Colorful FX\Scripts\Effects\WhiteBalance.cs" />
      <Compile Include="Assets\Colorful FX\Scripts\Effects\Wiggle.cs" />
+     <Compile Include="Assets\SSAO Pro\Demo\Scripts\DemoUI.cs" />
+     <Compile Include="Assets\SSAO Pro\Demo\Scripts\RotateAround.cs" />
+     <Compile Include="Assets\SSAO Pro\Scripts\Attributes\ColorUsageAttribute.cs" />
+     <Compile Include="Assets\SSAO Pro\Scripts\Attributes\HelpURLAttribute.cs" />
+     <Compile Include="Assets\SSAO Pro\Scripts\SSAOPro.cs" />
      <Compile Include="Assets\Scripts\AntiCampCannon.cs" />
      <Compile Include="Assets\Scripts\ArtilleryMaster.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
@@ -161,6 +166,7 @@
      <None Include="Assets\Colorful FX\Shaders\ChannelClamper.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Colorful FX\Shaders\Technicolor.shader" />
+     <None Include="Assets\SSAO Pro\Readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\Colorful FX\Shaders\Glitch.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
@@ -173,6 +179,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceRaytrace.cginc" />
      <None Include="Assets\Colorful FX\Editor\Shaders\_DynamicLookup.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+     <None Include="Assets\SSAO Pro\Resources\SSAOPro_v2.shader" />
      <None Include="Assets\Colorful FX\Shaders\SCurveContrast.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
@@ -207,6 +214,8 @@
      <None Include="Assets\Colorful FX\Shaders\ComicBook.shader" />
      <None Include="Assets\Colorful FX\Shaders\WaveDistortion.shader" />
      <None Include="Assets\Colorful FX\Shaders\Negative.shader" />
+     <None Include="Assets\SSAO Pro\Changelog.txt" />
+     <None Include="Assets\SSAO Pro\Resources\SSAOPro.cginc" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\Colorful FX\Shaders\Colorful.cginc" />
      <None Include="Assets\Colorful FX\Shaders\PhotoFilter.shader" />
