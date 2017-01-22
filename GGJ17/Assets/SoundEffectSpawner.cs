@@ -20,6 +20,10 @@ public class SoundEffectSpawner : MonoBehaviour {
 		if (clip == null) return;
 		var clone = Instantiate(spawner.prefab, position, Quaternion.identity);
 		clone.clip = clip;
+
+		clone.volume = Random.Range(0.8f, 1);
+		clone.pitch = Random.Range(0.9f, 1.1f);
+
 		clone.Play();
 		Destroy(clone.gameObject, clone.clip.length);
 	}

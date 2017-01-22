@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (!isGrounded) {
 //			rb.velocity += 	
 		}
-		Debug.Log ("isGrounded: " + isGrounded);
+		//Debug.Log ("isGrounded: " + isGrounded);
 
 		if (Input.GetAxis ("Jump") > 0.5f && isGrounded) {
 			rb.AddForce (Vector3.up * jumpForce);

@@ -3,35 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using ExtensionMethods;
 
-public class Cannon : MonoBehaviour {
+public class AntiCampCannon : Cannon {
 
-	[HideInInspector]
-	public Vector3 target;
+	public TrackPlayerPosition camperTracker;
 
-	/// <param name="prefab">The unit to instantiate from (duplicate) when firing.</param>
-	/// <param name="impactAfter">Number of seconds for when object is supposed to reach <see cref="target"/>.</param>
-	public void FireAt(SelfDestructUnit prefab, float impactAfter) {
-
-		SelfDestructUnit clone = Instantiate(prefab, transform.position, Quaternion.identity);
-
-		clone.delay = impactAfter;
-		clone.target = target;
-		// Add randomization
-		clone.target += Random.Range(0, 360).FromDegrees(Random.Range(0, 8)).xzy(0);
-
-		// Get components
-		var body = clone.GetComponent<Rigidbody>();
-
-		// Calculate velocity
-		var delta = clone.target - clone.transform.position;
-		body.velocity = VectorHelper.CalculateVelocity(delta, impactAfter / Time.fixedDeltaTime);
-
-		clone.transform.forward = body.velocity.normalized;
+	private void Update() {
+		target = camperTracker.GetLastPosition().SetY(0);
 	}
+
 
 #if UNITY_EDITOR
 
 	private void OnDrawGizmosSelected() {
+		if (camperTracker == null) return;
+
+		target = camperTracker.GetLastPosition().SetY(0);
 
 		UnityEditor.Handles.color = new Color(0, 1, 1);
 		UnityEditor.Handles.ArrowCap(-1, target + Vector3.up, Quaternion.FromToRotation(Vector3.forward, Vector3.down), 1);
@@ -52,14 +38,6 @@ public class Cannon : MonoBehaviour {
 			last = next;
 		}
 	}
-
-	//void UpdatePredictionLine() {
-	//	predictionLine.SetVertexCount(180);
-	//	for (int i = 0; i < 180; i++) {
-	//		Vector3 posN = GetTrajectoryPoint(spawnTarget.position, startingVelocity, i, Physics.gravity);
-	//		predictionLine.SetPosition(i, posN);
-	//	}
-	//}
 
 	Vector3 GetTrajectoryPoint(Vector3 startingPosition, Vector3 initialVelocity, float timestep) {
 		float physicsTimestep = Time.fixedDeltaTime;
